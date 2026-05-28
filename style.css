@@ -198,6 +198,17 @@ nav {
   color: var(--gold);
 }
 
+.hero-category {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+  margin-bottom: 1.8rem;
+  animation: fadeUp 0.9s 0.28s ease both;
+}
+
 .hero-subtitle {
   font-size: 0.88rem;
   line-height: 1.8;
@@ -387,7 +398,21 @@ section { padding: 8rem 0; }
   color: var(--gold);
 }
 
-.about-visual { position: relative; }
+.about-visual { position: relative; display: flex; flex-direction: column; gap: 2rem; }
+
+.about-portrait-wrap {
+  display: flex;
+  justify-content: center;
+}
+.about-portrait {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 3px solid var(--gold-pale);
+  box-shadow: 0 8px 32px rgba(28,28,28,0.12);
+}
 
 .about-card {
   background: var(--cream);
@@ -650,6 +675,159 @@ section { padding: 8rem 0; }
 }
 
 .gtab:hover:not(.active) { color: var(--gold-light); }
+
+/* Category tabs */
+.cat-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 3.5rem;
+  border: 1px solid var(--rule);
+}
+
+.cat-tab {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 1rem 3.5rem;
+  background: transparent;
+  color: rgba(245,241,235,0.45);
+  border: none;
+  border-right: 1px solid var(--rule);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cat-tab:last-child { border-right: none; }
+.cat-tab.active { background: var(--gold); color: var(--cream); }
+.cat-tab:hover:not(.active) { color: var(--gold-light); }
+
+/* New built cards */
+.newbuild-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2px;
+  margin-top: 0.5rem;
+}
+
+.newbuild-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(168,137,108,0.15);
+  padding: 3.5rem 3rem;
+  position: relative;
+  transition: background 0.4s;
+}
+
+.newbuild-card:hover { background: rgba(168,137,108,0.07); }
+
+.nb-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 5rem;
+  font-weight: 300;
+  color: rgba(168,137,108,0.15);
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+
+.nb-meta { margin-bottom: 1.8rem; }
+
+.nb-type {
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.8rem;
+}
+
+.nb-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1.15;
+}
+
+.nb-title em {
+  font-style: italic;
+  color: var(--gold-light);
+}
+
+.nb-desc {
+  font-size: 0.84rem;
+  color: rgba(245,241,235,0.55);
+  line-height: 1.9;
+  margin-bottom: 2rem;
+}
+
+.nb-credit {
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(168,137,108,0.2);
+}
+
+.nb-photos {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: rgba(245,241,235,0.25);
+}
+
+.nb-slider-wrap {
+  position: relative;
+  margin-top: 2rem;
+  width: 100%;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+  background: rgba(0,0,0,0.2);
+}
+
+.nb-slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  cursor: zoom-in;
+  transition: opacity 0.3s ease;
+}
+
+.nb-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(28,28,28,0.65);
+  border: 1px solid rgba(168,137,108,0.3);
+  color: var(--gold-light);
+  width: 48px; height: 48px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  backdrop-filter: blur(4px);
+}
+
+.nb-arrow:hover { background: var(--gold); color: var(--cream); }
+.nb-prev { left: 1rem; }
+.nb-next { right: 1rem; }
+
+.nb-counter {
+  position: absolute;
+  bottom: 1rem;
+  right: 1.2rem;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  color: rgba(245,241,235,0.6);
+  background: rgba(28,28,28,0.55);
+  padding: 0.3rem 0.7rem;
+  backdrop-filter: blur(4px);
+}
 
 /* Project selector */
 .project-tabs {
@@ -1095,6 +1273,8 @@ footer {
   .process-grid { grid-template-columns: 1fr 1fr; }
   .lang-inner { gap: 2rem; flex-wrap: wrap; }
 
+  .newbuild-grid { grid-template-columns: 1fr; }
+  .cat-tab { padding: 0.9rem 2rem; }
   .contact-form { grid-template-columns: 1fr; }
 
   .container { padding: 0 2rem; }

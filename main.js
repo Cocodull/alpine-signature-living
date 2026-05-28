@@ -136,6 +136,17 @@ function buildProjectTabs() {
   container.style.display = PROJECTS.length > 1 ? 'flex' : 'none';
 }
 
+// ── Category tabs (Renovation / New Built) ──
+document.querySelectorAll('.cat-tab').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.cat-tab').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const cat = btn.dataset.cat;
+    document.getElementById('cat-renovation').style.display = cat === 'renovation' ? '' : 'none';
+    document.getElementById('cat-newbuild').style.display   = cat === 'newbuild'   ? '' : 'none';
+  });
+});
+
 // ── Gallery mode tabs ──
 document.querySelectorAll('.gtab').forEach(btn => {
   btn.addEventListener('click', () => {
@@ -202,6 +213,47 @@ function openLightbox(src) {
   document.getElementById('lbImg').src = src;
   lb.classList.add('open');
 }
+
+// ── Baechtelenweg slider ──
+// All photos — owner will curate and replace folder with final selection
+const NB_PHOTOS = Array.from({length: 41}, (_, i) =>
+  `images/baechtelenweg/baechtelenweg-${String(i+1).padStart(2,'0')}.jpg`
+);
+
+let nbIdx = 0;
+
+function nbLoad(idx) {
+  nbIdx = (idx + NB_PHOTOS.length) % NB_PHOTOS.length;
+  const img = document.getElementById('nb-slide-img');
+  img.src = NB_PHOTOS[nbIdx];
+  document.getElementById('nb-current').textContent = nbIdx + 1;
+}
+
+const nbSlider = document.getElementById('nb-baechtelenweg');
+if (nbSlider) {
+  document.getElementById('nb-total').textContent = NB_PHOTOS.length;
+  document.getElementById('nb-slide-img').onclick = () => openLightbox(NB_PHOTOS[nbIdx]);
+  document.getElementById('nb-prev').onclick = () => nbLoad(nbIdx - 1);
+  document.getElementById('nb-next').onclick = () => nbLoad(nbIdx + 1);
+
+  // Swipe support
+  let touchStartX = 0;
+  nbSlider.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  nbSlider.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 40) dx < 0 ? nbLoad(nbIdx + 1) : nbLoad(nbIdx - 1);
+  });
+
+  nbLoad(0);
+}
+
+// Keyboard nav for nb slider when new-built tab is active
+document.addEventListener('keydown', e => {
+  const catNewbuild = document.getElementById('cat-newbuild');
+  if (!catNewbuild || catNewbuild.style.display === 'none') return;
+  if (e.key === 'ArrowLeft')  nbLoad(nbIdx - 1);
+  if (e.key === 'ArrowRight') nbLoad(nbIdx + 1);
+});
 
 // ── Init ──
 buildProjectTabs();

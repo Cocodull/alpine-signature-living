@@ -59,12 +59,6 @@ const PROJECTS = [
         after:  "images/ovronnaz/kitchen-after-2.jpg"
       },
       {
-        label: "Kitchen — Detail",
-        note: "",
-        before: "images/ovronnaz/kitchen-before-1.jpg",
-        after:  "images/ovronnaz/kitchen-after-1.jpg"
-      },
-      {
         label: "Bedroom",
         note: "The bedroom was stripped back and rethought — calm, considered, and properly proportioned.",
         before: "images/ovronnaz/bedroom-before-1.jpg",

@@ -924,7 +924,7 @@ section { padding: 8rem 0; }
   max-width: 1100px;
   margin: 0 auto;
   overflow: hidden;
-  aspect-ratio: 16/9;
+  aspect-ratio: 4/3;
   cursor: ew-resize;
   user-select: none;
   border: none;

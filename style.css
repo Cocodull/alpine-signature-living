@@ -69,6 +69,41 @@ nav {
 
 .nav-links a:hover { color: var(--gold); }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 0.2rem 0.1rem;
+  transition: color 0.2s;
+}
+
+.lang-btn:hover { color: var(--gold); }
+.lang-btn.active { color: var(--gold); font-weight: 500; }
+
+.lang-sep {
+  font-size: 0.6rem;
+  color: var(--rule);
+  user-select: none;
+}
+
 .nav-cta {
   font-family: 'Jost', sans-serif;
   font-size: 0.72rem;
@@ -838,6 +873,113 @@ section { padding: 8rem 0; }
   border: 1px solid rgba(168,137,108,0.3);
 }
 
+/* ── Editorial renovation cards ── */
+#renovationCards {
+  margin-top: 3rem;
+}
+
+.room-card {
+  margin-bottom: 5rem;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid rgba(168,137,108,0.15);
+}
+
+.room-card:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.room-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px;
+}
+
+.room-photo-col {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  cursor: zoom-in;
+}
+
+.room-photo-col img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+
+.room-photo-col:hover img {
+  transform: scale(1.03);
+}
+
+.photo-tag {
+  position: absolute;
+  bottom: 1rem;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.8rem;
+  z-index: 2;
+}
+
+.avant-tag {
+  right: 1rem;
+  background: rgba(28,28,28,0.7);
+  color: rgba(245,241,235,0.75);
+}
+
+.apres-tag {
+  left: 1rem;
+  background: rgba(168,137,108,0.88);
+  color: var(--cream);
+}
+
+.room-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-top: 1.8rem;
+}
+
+.room-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem;
+  font-weight: 300;
+  color: rgba(168,137,108,0.25);
+  line-height: 1;
+  flex-shrink: 0;
+  min-width: 3rem;
+}
+
+.room-info-text { flex: 1; }
+
+.room-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--cream);
+  margin-bottom: 0.6rem;
+  line-height: 1.2;
+}
+
+.room-note {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: rgba(245,241,235,0.55);
+  line-height: 1.75;
+  max-width: 680px;
+}
+
+/* ── Project tabs ── */
 .ptab {
   font-family: 'Jost', sans-serif;
   font-size: 0.68rem;
@@ -1255,6 +1397,7 @@ footer {
   .nav-links { display: none; }
   .nav-cta { display: none; }
   .nav-hamburger { display: flex; }
+  .lang-toggle { gap: 0.2rem; }
 
   nav.mobile-open .nav-links {
     display: flex;
@@ -1302,5 +1445,7 @@ footer {
   .form-submit { flex-direction: column; }
   .footer-inner { flex-direction: column; text-align: center; }
   .photo-grid { grid-template-columns: repeat(2, 1fr); }
-  .slider-wrap { aspect-ratio: 4/3; }
+  .room-photos { grid-template-columns: 1fr; }
+  .room-info { flex-direction: column; gap: 0.5rem; }
+  .room-num { font-size: 2rem; }
 }

@@ -23,6 +23,7 @@
     "description": "Property project management for residential construction and renovation in Switzerland. Bilingual coordination by Corinne Dulles — from acquisition and permits to site supervision and handover.",
     "url": "https://alpinesignatureliving.ch",
     "email": "contact@alpinesignatureliving.ch",
+    "telephone": "+41788653037",
     "areaServed": "Switzerland",
     "availableLanguage": ["English", "French"],
     "serviceType": ["Acquisition Advisory", "Construction & Renovation Management", "Administrative & Permit Coordination", "Budget Management", "Financing Coordination", "Interior Design & Furnishing"]
@@ -40,13 +41,20 @@
   <nav>
     <a href="#" class="nav-logo">Alpine <span>Signature</span> Living</a>
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#process">Process</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about"    data-i18n="nav.about">About</a></li>
+      <li><a href="#services" data-i18n="nav.services">Services</a></li>
+      <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+      <li><a href="#process"  data-i18n="nav.process">Process</a></li>
+      <li><a href="#contact"  data-i18n="nav.contact">Contact</a></li>
     </ul>
-    <a href="#contact" class="nav-cta">Enquire</a>
+    <div class="nav-right">
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
+        <span class="lang-sep">|</span>
+        <button class="lang-btn" data-lang="fr" onclick="setLang('fr')">FR</button>
+      </div>
+      <a href="#contact" class="nav-cta" data-i18n="nav.cta">Enquire</a>
+    </div>
     <button class="nav-hamburger" aria-label="Open menu">
       <span></span><span></span><span></span>
     </button>
@@ -55,34 +63,25 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-image-col">
-      <img
-        class="hero-bg"
-        src="images/hero.jpg"
-        alt="Swiss Alps mountain landscape in Valais"
-      />
+      <img class="hero-bg" src="images/hero.jpg" alt="Swiss Alps mountain landscape in Valais" />
     </div>
-
     <div class="hero-content-col">
-      <p class="hero-tag">Valais, Switzerland</p>
-      <h1 class="hero-title">
-        Consulting, Planning<br>
-        &amp; Coordination<br>
-        for Residential Property<br>
-        Projects in <em>Switzerland</em>
+      <p class="hero-tag" data-i18n="hero.tag">Valais, Switzerland</p>
+      <h1 class="hero-title" data-i18n="hero.title">
+        Consulting, Planning<br>&amp; Coordination<br>for Residential Property<br>Projects in <em>Switzerland</em>
       </h1>
       <p class="hero-category">Construction &nbsp;·&nbsp; Rénovation</p>
-      <p class="hero-subtitle">Expert representation for discerning owners who are not on site. Every phase handled with precision — in French and in English — from the first planning submission to the final handover.</p>
+      <p class="hero-subtitle" data-i18n="hero.subtitle">Expert representation for discerning owners who are not on site. Every phase handled with precision — in French and in English — from the first planning submission to the final handover.</p>
       <div class="hero-actions">
-        <a href="#contact" class="btn-primary">Request a Consultation</a>
+        <a href="#contact" class="btn-primary" data-i18n="hero.cta1">Request a Consultation</a>
         <a href="#services" class="btn-secondary">
-          Our Services
+          <span data-i18n="hero.cta2">Our Services</span>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
             <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </a>
       </div>
     </div>
-
     <div class="hero-scroll">
       <div class="scroll-line"></div>
       Scroll
@@ -114,16 +113,16 @@
     <div class="container">
       <div class="about-grid">
         <div class="about-text">
-          <p class="section-label reveal">About</p>
-          <h2 class="section-title reveal">A trusted presence<br><em>in Valais</em></h2>
-          <blockquote class="about-quote reveal">
+          <p class="section-label reveal" data-i18n="about.label">About</p>
+          <h2 class="section-title reveal" data-i18n="about.title">A trusted presence<br><em>in Valais</em></h2>
+          <blockquote class="about-quote reveal" data-i18n="about.quote">
             "Owning a residence in Valais should be a source of pleasure — not a burden of complexity. I exist to ensure it remains exactly that."
           </blockquote>
-          <p class="about-body reveal">
-            I am Corinne Dulles, founder of Alpine Signature Living. My professional background spans senior roles in global companies — working with Fortune 500 clients on strategic consulting, business transformation, and data-driven analytics. I bring that same rigour to every property project: structured coordination, precise budget management, and a trusted network of architects, contractors, and financial professionals built through years of local relationships.
+          <p class="about-body reveal" data-i18n="about.body1">
+            I am Corinne Dulles, founder of Alpine Signature Living. My professional background spans senior roles in global companies — advising Fortune 500 clients on strategic consulting, business transformation, and data-driven decision-making. I bring that same rigour to every property project: structured coordination, precise budget management, and a trusted network of architects, contractors, and financial professionals built through years of local relationships.
           </p>
-          <p class="about-body reveal">
-            Whether you are in London, Geneva, or Singapore, I act as your eyes, your voice, and your advocate — from the first planning submission to the final handover. My approach is personal, meticulous, and entirely confidential.
+          <p class="about-body reveal" data-i18n="about.body2">
+            Whether you are in London, Geneva, or Singapore, I act as your eyes, your voice, and your advocate on the ground — from the first planning submission to the final handover. My approach is personal, meticulous, and entirely confidential.
           </p>
           <p class="about-signature reveal">Corinne Dulles</p>
         </div>
@@ -135,19 +134,19 @@
           <div class="about-card">
             <div class="about-stat">
               <div class="stat-num">100%</div>
-              <div class="stat-label">Bilingual — French & English</div>
+              <div class="stat-label" data-i18n="stat.bilingual">Bilingual — French & English</div>
             </div>
             <div class="about-stat">
               <div class="stat-num">Local</div>
-              <div class="stat-label">An intimate Valais network</div>
+              <div class="stat-label" data-i18n="stat.local">An intimate Valais network</div>
             </div>
             <div class="about-stat">
               <div class="stat-num">End-to-End</div>
-              <div class="stat-label">From acquisition to handover</div>
+              <div class="stat-label" data-i18n="stat.endtoend">From acquisition to handover</div>
             </div>
             <div class="about-stat">
               <div class="stat-num">Discreet</div>
-              <div class="stat-label">Trusted by discerning owners worldwide</div>
+              <div class="stat-label" data-i18n="stat.discreet">Trusted by discerning owners worldwide</div>
             </div>
           </div>
         </div>
@@ -159,8 +158,8 @@
   <section class="services" id="services">
     <div class="container">
       <div class="services-header">
-        <p class="section-label reveal" style="justify-content:center;">Services</p>
-        <h2 class="section-title reveal">A single point of coordination<br>for every stage of your <em>project</em></h2>
+        <p class="section-label reveal" style="justify-content:center;" data-i18n="services.label">Services</p>
+        <h2 class="section-title reveal" data-i18n="services.title">A single point of coordination<br>for every stage of your <em>project</em></h2>
       </div>
 
       <div class="services-grid reveal">
@@ -168,22 +167,19 @@
         <div class="service-card">
           <svg class="service-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.2">
             <rect x="4" y="14" width="28" height="18" rx="1"/>
-            <path d="M1 14l17-10 17 10"/>
-            <path d="M14 32V22h8v10"/>
+            <path d="M1 14l17-10 17 10"/><path d="M14 32V22h8v10"/>
           </svg>
-          <h3 class="service-title">Acquisition Advisory</h3>
-          <p class="service-desc">Sourcing and evaluating properties that meet your criteria — from alpine chalets to investment residences — through a carefully cultivated network of local agents, notaries, and private contacts.</p>
+          <h3 class="service-title" data-i18n="svc1.title">Acquisition Advisory</h3>
+          <p class="service-desc" data-i18n="svc1.desc">Sourcing and evaluating properties that match your exact criteria — from alpine chalets to investment residences — through a carefully cultivated network of local agents, notaries, and private contacts inaccessible to the open market.</p>
         </div>
 
         <div class="service-card">
           <svg class="service-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.2">
-            <path d="M6 30V12l12-8 12 8v18"/>
-            <rect x="13" y="18" width="10" height="12"/>
-            <path d="M4 30h28"/>
-            <path d="M10 16h2M24 16h2M10 22h2M24 22h2"/>
+            <path d="M6 30V12l12-8 12 8v18"/><rect x="13" y="18" width="10" height="12"/>
+            <path d="M4 30h28"/><path d="M10 16h2M24 16h2M10 22h2M24 22h2"/>
           </svg>
-          <h3 class="service-title">Construction & Renovation</h3>
-          <p class="service-desc">End-to-end coordination of new builds and renovations — from contractor selection and permit applications to site supervision and final handover. Your project delivered on time and within budget.</p>
+          <h3 class="service-title" data-i18n="svc2.title">Construction & Renovation</h3>
+          <p class="service-desc" data-i18n="svc2.desc">End-to-end coordination of new builds and full renovations — from contractor selection and permit applications to site supervision and final handover. Your project delivered on schedule and within budget, without surprises.</p>
         </div>
 
         <div class="service-card">
@@ -191,35 +187,32 @@
             <path d="M8 4h20a2 2 0 012 2v24a2 2 0 01-2 2H8a2 2 0 01-2-2V6a2 2 0 012-2z"/>
             <path d="M12 12h12M12 18h12M12 24h8"/>
           </svg>
-          <h3 class="service-title">Administrative & Permit Coordination</h3>
-          <p class="service-desc">All correspondence, permit applications, notarial procedures, and local authority requirements handled with precision — in French and in English. Nothing overlooked.</p>
+          <h3 class="service-title" data-i18n="svc3.title">Administrative & Permit Coordination</h3>
+          <p class="service-desc" data-i18n="svc3.desc">All correspondence, permit applications, notarial procedures, and local authority requirements handled with precision — in French and in English. Every deadline met, every document correct.</p>
         </div>
 
         <div class="service-card">
           <svg class="service-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.2">
-            <circle cx="18" cy="18" r="14"/>
-            <path d="M18 8v10l6 4"/>
+            <circle cx="18" cy="18" r="14"/><path d="M18 8v10l6 4"/>
           </svg>
-          <h3 class="service-title">Budget Management & Negotiation</h3>
-          <p class="service-desc">Detailed project budgeting, supplier price negotiations, and ongoing cost control — with clear, periodic reporting so you retain full financial visibility at every stage.</p>
+          <h3 class="service-title" data-i18n="svc4.title">Budget Management & Negotiation</h3>
+          <p class="service-desc" data-i18n="svc4.desc">Detailed project budgeting, supplier price negotiations, and rigorous cost control — with clear, periodic reporting so you retain full financial visibility and peace of mind at every stage.</p>
         </div>
 
         <div class="service-card">
           <svg class="service-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.2">
-            <path d="M4 28l8-8 6 6 8-10 6 6"/>
-            <path d="M2 4v28h32"/>
+            <path d="M4 28l8-8 6 6 8-10 6 6"/><path d="M2 4v28h32"/>
           </svg>
-          <h3 class="service-title">Financing Coordination</h3>
-          <p class="service-desc">Structuring and coordinating the financing of your property project — liaising with banks and financial institutions on your behalf, in the language and format they require.</p>
+          <h3 class="service-title" data-i18n="svc5.title">Financing Coordination</h3>
+          <p class="service-desc" data-i18n="svc5.desc">Structuring and coordinating the financing of your property project — liaising with Swiss banks and financial institutions on your behalf, in the language and format they require.</p>
         </div>
 
         <div class="service-card">
           <svg class="service-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.2">
-            <path d="M6 6h24v4H6zM6 14h16M6 20h20M6 26h12"/>
-            <path d="M26 20l4 4-4 4"/>
+            <path d="M6 6h24v4H6zM6 14h16M6 20h20M6 26h12"/><path d="M26 20l4 4-4 4"/>
           </svg>
-          <h3 class="service-title">Interior Design & Furnishing</h3>
-          <p class="service-desc">Specification of interior finishes, material selections, and furnishing — from tile and flooring choices to kitchen design and final staging. A considered interior that reflects the quality of the project.</p>
+          <h3 class="service-title" data-i18n="svc6.title">Interior Design & Furnishing</h3>
+          <p class="service-desc" data-i18n="svc6.desc">Specification of interior finishes, material selections, and furnishing — from tile and flooring choices to full kitchen design and final staging. An interior that reflects the quality of the project and the precision of your vision.</p>
         </div>
 
       </div>
@@ -233,18 +226,18 @@
         <div class="lang-item">
           <span class="lang-flag">🇨🇭</span>
           <span class="lang-name">Français</span>
-          <span class="lang-label">Native fluency</span>
+          <span class="lang-label" data-i18n="lang.native">Native fluency</span>
         </div>
         <span class="lang-divider">&amp;</span>
         <div class="lang-middle">
-          <span class="lang-middle-title">Seamlessly bilingual</span>
-          <span class="lang-middle-sub">French and English, without compromise</span>
+          <span class="lang-middle-title" data-i18n="lang.bilingual">Seamlessly bilingual</span>
+          <span class="lang-middle-sub" data-i18n="lang.sub">French and English, without compromise</span>
         </div>
         <span class="lang-divider">&amp;</span>
         <div class="lang-item">
           <span class="lang-flag">🇬🇧</span>
           <span class="lang-name">English</span>
-          <span class="lang-label">Full professional fluency</span>
+          <span class="lang-label" data-i18n="lang.fluent">Full professional fluency</span>
         </div>
       </div>
     </div>
@@ -253,77 +246,36 @@
   <!-- CASE STUDIES -->
   <section class="gallery-section" id="projects">
     <div class="container">
-      <p class="section-label reveal" style="justify-content:center;">Case Studies</p>
-      <h2 class="section-title reveal" style="text-align:center;"><em>Selected</em> Works</h2>
+      <p class="section-label reveal" style="justify-content:center;" data-i18n="gallery.label">Case Studies</p>
+      <h2 class="section-title reveal" style="text-align:center;" data-i18n="gallery.title"><em>Selected</em> Works</h2>
 
       <!-- Category tabs -->
       <div class="cat-tabs reveal">
-        <button class="cat-tab active" data-cat="renovation">Renovation</button>
-        <button class="cat-tab" data-cat="newbuild">New Built sur Plans</button>
+        <button class="cat-tab active" data-cat="renovation" data-i18n="gallery.tab.reno">Renovation</button>
+        <button class="cat-tab" data-cat="newbuild" data-i18n="gallery.tab.new">New Built sur Plans</button>
       </div>
 
       <!-- ── RENOVATION ── -->
       <div id="cat-renovation">
-        <p class="gallery-sub" id="galleryDesc"></p>
-
+        <p class="gallery-sub" id="renovationDesc"></p>
         <div class="project-tabs" id="projectTabs" style="display:none;"></div>
-
-        <div class="gallery-tabs">
-          <button class="gtab active" data-mode="slider">Before / After</button>
-          <button class="gtab" data-mode="grid">Full Gallery</button>
-        </div>
-
-        <div id="slider-view">
-          <div class="pair-nav">
-            <button class="pair-btn" id="prevPair">&#8592;</button>
-            <span class="pair-label" id="pairLabel"></span>
-            <button class="pair-btn" id="nextPair">&#8594;</button>
-          </div>
-          <div class="slider-wrap" id="sliderWrap">
-            <div class="slider-before" id="sliderBefore">
-              <img id="beforeImg" src="" alt="Before renovation" />
-              <span class="img-badge before-badge">Avant</span>
-            </div>
-            <div class="slider-after" id="sliderAfter">
-              <img id="afterImg" src="" alt="After renovation" />
-              <span class="img-badge after-badge">Après</span>
-            </div>
-            <div class="slider-handle" id="sliderHandle">
-              <div class="handle-line"></div>
-              <div class="handle-circle">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                  <path d="M6 10l-4 0M6 10l-3-3M6 10l-3 3M14 10l4 0M14 10l3-3M14 10l3 3" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div class="pair-dots" id="pairDots"></div>
-          <p class="pair-note" id="pairNote"></p>
-        </div>
-
-        <div id="grid-view" style="display:none;">
-          <div class="grid-tabs">
-            <button class="grid-tab active" data-set="after">Après</button>
-            <button class="grid-tab" data-set="before">Avant</button>
-          </div>
-          <div class="photo-grid" id="photoGrid"></div>
-        </div>
+        <div id="renovationCards"></div>
       </div>
 
       <!-- ── NEW BUILT SUR PLANS ── -->
       <div id="cat-newbuild" style="display:none;">
-        <p class="gallery-sub">Two residential projects developed from plan — each shaped in close collaboration with the project team and architect to reflect the client's precise vision.</p>
+        <p class="gallery-sub" data-i18n="gallery.newbuild.sub">Two residential projects developed from plan — each shaped in close collaboration with the project team and architect to reflect the client's precise vision.</p>
 
         <div class="newbuild-grid">
 
           <div class="newbuild-card reveal">
             <div class="nb-num">01</div>
             <div class="nb-meta">
-              <span class="nb-type">Penthouse · Canton of Bern</span>
-              <h3 class="nb-title">Baechtelenweg<br><em>Vegetal Tower</em></h3>
+              <span class="nb-type" data-i18n="nb1.type">Penthouse · Canton of Bern</span>
+              <h3 class="nb-title" data-i18n="nb1.title">Baechtelenweg<br><em>Vegetal Tower</em></h3>
             </div>
-            <p class="nb-desc">A penthouse residence within the Garden Tower at Baechtelenweg, Wabern — one of Switzerland's most celebrated contemporary buildings. Engaged by the owners during the fit-out phase, Corinne advised on and coordinated the complete interior specification: the selection of tiles, flooring materials, and the full design of the kitchen. The building architecture is the work of the project's architects.</p>
-            <p class="nb-credit">Interior specification &amp; finish selection — tiles, flooring, kitchen design</p>
+            <p class="nb-desc" data-i18n="nb1.desc">A penthouse residence within the Garden Tower at Baechtelenweg, Wabern — one of Switzerland's most celebrated contemporary buildings. Engaged by the owners during the fit-out phase, Corinne advised on and coordinated the complete interior specification: the selection of tiles, flooring materials, and the full design of the kitchen. The building architecture is the work of the project's architects.</p>
+            <p class="nb-credit" data-i18n="nb1.credit">Interior specification &amp; finish selection — tiles, flooring, kitchen design</p>
             <div class="nb-slider-wrap" id="nb-baechtelenweg">
               <button class="nb-arrow nb-prev" id="nb-prev" aria-label="Previous">&#8592;</button>
               <img class="nb-slide-img" id="nb-slide-img" src="" alt="Baechtelenweg Vegetal Tower" />
@@ -335,12 +287,12 @@
           <div class="newbuild-card reveal">
             <div class="nb-num">02</div>
             <div class="nb-meta">
-              <span class="nb-type">Chalet · La Tzoumaz, Verbier</span>
-              <h3 class="nb-title">La Tzoumaz<br><em>Private Chalet</em></h3>
+              <span class="nb-type" data-i18n="nb2.type">Chalet · La Tzoumaz, Verbier</span>
+              <h3 class="nb-title" data-i18n="nb2.title">La Tzoumaz<br><em>Private Chalet</em></h3>
             </div>
-            <p class="nb-desc">A private chalet at the foot of the Verbier ski domain, developed in close collaboration with architect Thomas De Witt of Home Partners. The project brought together two distinct visions into a single, cohesive alpine residence — refined at every stage until both architect and client were fully satisfied.</p>
-            <p class="nb-credit">In collaboration with Thomas De Witt — Home Partners</p>
-            <p class="nb-photos">Photography to follow</p>
+            <p class="nb-desc" data-i18n="nb2.desc">A private chalet at the foot of the Verbier ski domain, developed in close collaboration with architect Thomas De Witt of Home Partners. The project united two distinct creative visions into a single, cohesive alpine residence — refined at every stage until both architect and client were fully satisfied.</p>
+            <p class="nb-credit" data-i18n="nb2.credit">In collaboration with Thomas De Witt — Home Partners</p>
+            <p class="nb-photos" data-i18n="nb2.photos">Photography to follow</p>
           </div>
 
         </div>
@@ -352,29 +304,29 @@
   <!-- PROCESS -->
   <section class="process" id="process">
     <div class="container">
-      <p class="section-label reveal">How it works</p>
-      <h2 class="section-title reveal">A measured approach<br><em>from first contact to completion</em></h2>
+      <p class="section-label reveal" data-i18n="process.label">How it works</p>
+      <h2 class="section-title reveal" data-i18n="process.title">A measured approach<br><em>from first contact to completion</em></h2>
 
       <div class="process-grid reveal">
         <div class="process-step">
           <div class="step-num">01</div>
-          <h3 class="step-title">Private Consultation</h3>
-          <p class="step-desc">A confidential discussion at your convenience — to understand your project, your expectations, and the level of representation you require. No obligation.</p>
+          <h3 class="step-title" data-i18n="step1.title">Private Consultation</h3>
+          <p class="step-desc" data-i18n="step1.desc">A confidential discussion at your convenience — to understand your project, your expectations, and the level of representation you require. No obligation.</p>
         </div>
         <div class="process-step">
           <div class="step-num">02</div>
-          <h3 class="step-title">Written Proposal</h3>
-          <p class="step-desc">A clear, detailed proposal setting out scope, timeline, and fees. Every element is agreed in writing before any work commences.</p>
+          <h3 class="step-title" data-i18n="step2.title">Written Proposal</h3>
+          <p class="step-desc" data-i18n="step2.desc">A clear, detailed proposal setting out scope, timeline, and fees. Every element is agreed in writing before any work commences.</p>
         </div>
         <div class="process-step">
           <div class="step-num">03</div>
-          <h3 class="step-title">On-the-Ground Representation</h3>
-          <p class="step-desc">I become your presence in Valais — attending site meetings, overseeing works, liaising with authorities, and resolving matters before they need to reach you.</p>
+          <h3 class="step-title" data-i18n="step3.title">On-the-Ground Representation</h3>
+          <p class="step-desc" data-i18n="step3.desc">I become your presence in Valais — attending site meetings, overseeing works, liaising with authorities, and resolving matters before they need to reach you.</p>
         </div>
         <div class="process-step">
           <div class="step-num">04</div>
-          <h3 class="step-title">Structured Reporting</h3>
-          <p class="step-desc">Regular, written updates in your language of choice. You retain full visibility and control without the weight of daily involvement.</p>
+          <h3 class="step-title" data-i18n="step4.title">Structured Reporting</h3>
+          <p class="step-desc" data-i18n="step4.desc">Regular, written updates in your language of choice. You retain full visibility and control without the weight of daily involvement.</p>
         </div>
       </div>
     </div>
@@ -384,46 +336,47 @@
   <section class="cta-section" id="contact">
     <div class="container">
       <div class="cta-inner">
-        <p class="section-label reveal" style="justify-content:center;">Contact</p>
-        <h2 class="section-title reveal">Entrust your alpine project<br>to someone who <em>knows Valais</em></h2>
-        <p class="cta-sub reveal">I welcome a private introductory conversation at your convenience — in English or in French.</p>
+        <p class="section-label reveal" style="justify-content:center;" data-i18n="contact.label">Contact</p>
+        <h2 class="section-title reveal" data-i18n="contact.title">Entrust your alpine project<br>to someone who <em>knows Valais</em></h2>
+        <p class="cta-sub reveal" data-i18n="contact.sub">I welcome a private introductory conversation at your convenience — in English or in French.</p>
 
-        <!-- Formspree form — replace YOUR_FORM_ID after signing up at formspree.io -->
-        <form
-          class="contact-form reveal"
-          action="https://formspree.io/f/YOUR_FORM_ID"
-          method="POST"
-        >
+        <form class="contact-form reveal" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
           <div class="form-group">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" required placeholder="Jean-Pierre Martin" />
+            <label for="name" data-i18n="form.name">Full Name</label>
+            <input type="text" id="name" name="name" required
+              placeholder="Jean-Pierre Martin"
+              data-i18n-ph="form.name" />
           </div>
           <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required placeholder="you@example.com" />
+            <label for="email" data-i18n="form.email">Email Address</label>
+            <input type="email" id="email" name="email" required
+              placeholder="you@example.com" />
           </div>
           <div class="form-group">
-            <label for="phone">Phone (optional)</label>
-            <input type="tel" id="phone" name="phone" placeholder="+44 7700 000 000" />
+            <label for="phone" data-i18n="form.phone">Phone (optional)</label>
+            <input type="tel" id="phone" name="phone"
+              placeholder="+44 7700 000 000" />
           </div>
           <div class="form-group">
-            <label for="language">Preferred Language</label>
+            <label for="language" data-i18n="form.language">Preferred Language</label>
             <select id="language" name="language">
               <option value="English">English</option>
               <option value="French">Français</option>
             </select>
           </div>
           <div class="form-group full">
-            <label for="message">Your Enquiry</label>
-            <textarea id="message" name="message" required placeholder="Please describe your project or property and what you are looking for…"></textarea>
+            <label for="message" data-i18n="form.message">Your Enquiry</label>
+            <textarea id="message" name="message" required
+              placeholder="Please describe your project or property and what you are looking for…"
+              data-i18n-ph="form.message"></textarea>
           </div>
           <div class="form-submit full">
-            <button type="submit" class="btn-large">Submit Enquiry</button>
-            <a href="tel:+41788653037" class="btn-outline">Schedule a Call</a>
+            <button type="submit" class="btn-large" data-i18n="form.submit">Submit Enquiry</button>
+            <a href="tel:+41788653037" class="btn-outline" data-i18n="form.call">Schedule a Call</a>
           </div>
         </form>
 
-        <p class="cta-note reveal">Valais, Switzerland &nbsp;·&nbsp; Serving international owners worldwide</p>
+        <p class="cta-note reveal" data-i18n="contact.note">Valais, Switzerland &nbsp;·&nbsp; Serving international owners worldwide</p>
       </div>
     </div>
   </section>
@@ -433,12 +386,12 @@
     <div class="container">
       <div class="footer-inner">
         <div class="footer-logo">Alpine Signature Living</div>
-        <p class="footer-copy">© 2026 Alpine Signature Living. All rights reserved.</p>
+        <p class="footer-copy" data-i18n="footer.copy">© 2026 Alpine Signature Living. All rights reserved.</p>
         <ul class="footer-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about"    data-i18n="nav.about">About</a></li>
+          <li><a href="#services" data-i18n="nav.services">Services</a></li>
+          <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="#contact"  data-i18n="nav.contact">Contact</a></li>
         </ul>
       </div>
     </div>

@@ -244,8 +244,8 @@ const PROJECTS = [
           en: "The wall panelling was painted in a natural, chalky light grey — a quiet but decisive shift. The cupboard doors were refinished to replace the original orange tones with a more harmonious, natural palette.",
           fr: "Le lambris a été peint avec une peinture naturelle gris clair, très mat et crayeuse. Les portes des placards ont été retravaillées pour remplacer les tons oranges originels par une teinte plus harmonieuse et naturelle."
         },
-        before: "images/ovronnaz/s02-before.jpg",
-        after:  "images/ovronnaz/s02-after.jpg"
+        before: "images/ovronnaz/s02-after.jpg",
+        after:  "images/ovronnaz/s02-before.jpg"
       },
       {
         label: { en: "Entrance — Floor & Light", fr: "Entrée — Sol & Lumière" },
@@ -273,15 +273,6 @@ const PROJECTS = [
         },
         before: "images/ovronnaz/s05-before.jpg",
         after:  "images/ovronnaz/s05-after.jpg"
-      },
-      {
-        label: { en: "Living Room", fr: "Séjour" },
-        note: {
-          en: "The fireplace and its adjacent concrete bench dominated the room entirely. Their removal freed a significant amount of space. The false ceiling beams were also removed — immediately making the room feel taller and larger.",
-          fr: "La cheminée et le banc en béton adjacent dominaient entièrement le séjour. Leur suppression a libéré une surface considérable. Les fausses poutres au plafond ont été retirées, rendant la pièce immédiatement plus haute et plus grande."
-        },
-        before: "images/ovronnaz/s06-before.jpg",
-        after:  "images/ovronnaz/s06-after.jpg"
       },
       {
         label: { en: "Kitchen", fr: "Cuisine" },
@@ -325,6 +316,7 @@ const PROJECTS = [
           en: "The shower was cramped and dark. By replacing the solid walls and tray with glass, we gained both space and light — creating a larger shower and a bathroom that finally breathes.",
           fr: "La douche était étroite et sombre. En remplaçant les murs pleins et le bac par du verre, nous avons gagné espace et lumière — pour une douche plus grande et une salle de bain qui respire enfin."
         },
+        portrait: true,
         before: "images/ovronnaz/s11-before.jpg",
         after:  "images/ovronnaz/s11-after.jpg"
       }
@@ -377,15 +369,17 @@ function buildRenovationCards() {
         <span class="photo-tag apres-tag">${afterLabel}</span>
       </div>`).join('');
 
+    const containStyle = pair.portrait ? ' style="object-fit:contain;background:#111;"' : '';
+
     const card = document.createElement('div');
     card.className = 'room-card';
     card.innerHTML = `
       <div class="room-photos room-photos-${total}">
         <div class="room-photo-col">
-          <img src="${pair.before}" alt="${label} — ${beforeLabel}" loading="lazy">
+          <img src="${pair.before}" alt="${label} — ${beforeLabel}" loading="lazy"${containStyle}>
           <span class="photo-tag avant-tag">${beforeLabel}</span>
         </div>
-        ${afterCols}
+        ${afterCols.replace(/<img /g, `<img${containStyle} `)}
       </div>
       <div class="room-info">
         <span class="room-num">${String(i + 1).padStart(2, '0')}</span>

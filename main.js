@@ -257,8 +257,9 @@ const PROJECTS = [
           en: "The floor was laid with textured anthracite black tiles, creating coherence and a sense of quiet luxury. The cold white chandelier was replaced by warm-light spotlights — more welcoming, more considered.",
           fr: "Le sol est recouvert de carrelage anthracite texturisé, créant une harmonie dans la pièce et une sensation de luxe. La lumière blanche du lustre a été remplacée par des spots de lumière chaude, bien plus accueillants."
         },
-        before: "images/ovronnaz/s03-before.jpg",
-        after:  "images/ovronnaz/s03-after.jpg"
+        portrait: true,
+        before: "images/ovronnaz/s03-after.jpg",
+        after:  "images/ovronnaz/s03-before.jpg"
       },
       {
         label: { en: "Bedroom — Cabinets", fr: "Chambre — Placards" },

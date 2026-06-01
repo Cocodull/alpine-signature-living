@@ -376,17 +376,15 @@ function buildRenovationCards() {
         <span class="photo-tag apres-tag">${afterLabel}</span>
       </div>`).join('');
 
-    const containStyle = pair.portrait ? ' style="object-fit:contain;background:#111;"' : '';
-
     const card = document.createElement('div');
-    card.className = 'room-card';
+    card.className = pair.portrait ? 'room-card portrait-card' : 'room-card';
     card.innerHTML = `
       <div class="room-photos room-photos-${total}">
         <div class="room-photo-col">
-          <img src="${pair.before}" alt="${label} — ${beforeLabel}" loading="lazy"${containStyle}>
+          <img src="${pair.before}" alt="${label} — ${beforeLabel}" loading="lazy">
           <span class="photo-tag avant-tag">${beforeLabel}</span>
         </div>
-        ${afterCols.replace(/<img /g, `<img${containStyle} `)}
+        ${afterCols}
       </div>
       <div class="room-info">
         <span class="room-num">${String(i + 1).padStart(2, '0')}</span>

@@ -233,6 +233,10 @@ function setLang(lang) {
 const PROJECTS = [
   {
     name: "Ovronnaz",
+    title: {
+      en: "Appartement 2.5 pièces — Ovronnaz",
+      fr: "Appartement 2.5 pièces — Ovronnaz"
+    },
     desc: {
       en: "A complete transformation of a dated alpine apartment in Ovronnaz — every room reimagined, every surface reconsidered, and every detail resolved with precision.",
       fr: "Une transformation complète d'un appartement alpin vieillissant à Ovronnaz — chaque pièce repensée, chaque surface reconsidérée, chaque détail résolu avec précision."
@@ -347,6 +351,8 @@ function buildProjectTabs() {
 // ── Editorial renovation cards ──
 function buildRenovationCards() {
   const proj = PROJECTS[currentProject];
+  const titleEl = document.getElementById('renovationTitle');
+  if (titleEl) titleEl.textContent = proj.title[currentLang] || proj.title.en;
   const descEl = document.getElementById('renovationDesc');
   if (descEl) descEl.textContent = proj.desc[currentLang] || proj.desc.en;
 

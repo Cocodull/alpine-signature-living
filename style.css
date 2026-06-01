@@ -873,6 +873,18 @@ section { padding: 8rem 0; }
   border: 1px solid rgba(168,137,108,0.3);
 }
 
+.renovation-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.9rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--cream);
+  text-align: center;
+  margin-top: 2.5rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
+}
+
 /* ── Editorial renovation cards ── */
 #renovationCards {
   margin-top: 3rem;

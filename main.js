@@ -47,6 +47,12 @@ const PROJECTS = [
         after:  "images/ovronnaz/entrance-after.jpg"
       },
       {
+        label: "Entrance — Cupboards",
+        note: "Looking in from the main door — the new built-in cupboards replaced an awkward wall and gave the entrance its sense of order.",
+        before: "images/ovronnaz/entrance-2-before.jpg",
+        after:  "images/ovronnaz/entrance-2-after.jpg"
+      },
+      {
         label: "Living Room",
         note: "The living space was opened and refined — a lighter palette replacing the original heavy finishes.",
         before: "images/ovronnaz/living-room-before.jpg",

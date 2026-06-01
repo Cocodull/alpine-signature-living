@@ -38,24 +38,58 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 const PROJECTS = [
   {
     name: "Ovronnaz",
-    desc: "Complete renovation of a dated alpine apartment into a contemporary mountain residence.",
+    desc: "A complete transformation of a dated alpine apartment in Ovronnaz — every room reimagined, every surface reconsidered.",
     pairs: [
-      { label: "Living Room",   before: "images/ovronnaz-living-room-before.jpg",   after: "images/ovronnaz-living-room-after.jpg"   },
-      { label: "Bathroom",      before: "images/ovronnaz-bathroom-before.jpg",      after: "images/ovronnaz-bathroom-after.jpg"      },
-      { label: "Bedroom",       before: "images/ovronnaz-bedroom-before.jpg",       after: "images/ovronnaz-bedroom-after.jpg"       },
-      { label: "Entrance Hall", before: "images/ovronnaz-entrance-hall-before.jpg", after: "images/ovronnaz-entrance-hall-after.jpg" },
-      { label: "Shower Room",   before: "images/ovronnaz-shower-room-before.jpg",   after: "images/ovronnaz-shower-room-after.jpg"   },
-      { label: "Kitchen",       before: "images/ovronnaz-kitchen-before.jpg",       after: "images/ovronnaz-kitchen-after.jpg"       }
+      {
+        label: "Entrance",
+        note: "The entrance was reconfigured to maximise the sense of arrival and eliminate wasted circulation space.",
+        before: "images/ovronnaz/entrance-before.jpg",
+        after:  "images/ovronnaz/entrance-after.jpg"
+      },
+      {
+        label: "Living Room",
+        note: "The living space was opened and refined — a lighter palette replacing the original heavy finishes.",
+        before: "images/ovronnaz/living-room-before.jpg",
+        after:  "images/ovronnaz/living-room-after.jpg"
+      },
+      {
+        label: "Kitchen",
+        note: "A full kitchen redesign — new layout, new materials, the worktop and cabinetry rebuilt from scratch.",
+        before: "images/ovronnaz/kitchen-before-2.jpg",
+        after:  "images/ovronnaz/kitchen-after-2.jpg"
+      },
+      {
+        label: "Kitchen — Detail",
+        note: "",
+        before: "images/ovronnaz/kitchen-before-1.jpg",
+        after:  "images/ovronnaz/kitchen-after-1.jpg"
+      },
+      {
+        label: "Bedroom",
+        note: "The bedroom was stripped back and rethought — calm, considered, and properly proportioned.",
+        before: "images/ovronnaz/bedroom-before-1.jpg",
+        after:  "images/ovronnaz/bedroom-after-1.jpg"
+      },
+      {
+        label: "Bedroom — Second View",
+        note: "",
+        before: "images/ovronnaz/bedroom-before-2.jpg",
+        after:  "images/ovronnaz/bedroom-after-2.jpg"
+      },
+      {
+        label: "Corridor & Bathroom",
+        note: "The corridor had significant lost space, and the bathroom was undersized. By pushing the walls, we created generous storage and a proper bathroom volume.",
+        before: "images/ovronnaz/corridor-bathroom-before.jpg",
+        after:  "images/ovronnaz/corridor-bathroom-after.jpg"
+      },
+      {
+        label: "Bathroom",
+        note: "A window onto the corridor was removed entirely — freeing the wall, clearing the space, and adding a bespoke reclaimed-wood shelf in its place.",
+        before: "images/ovronnaz/bathroom-before.jpg",
+        after:  "images/ovronnaz/bathroom-after.jpg"
+      }
     ]
   }
-  // To add a new project, copy the block above and fill in your image paths:
-  // {
-  //   name: "Project Name",
-  //   desc: "Short description of the project.",
-  //   pairs: [
-  //     { label: "Room Name", before: "images/project-room-before.jpg", after: "images/project-room-after.jpg" }
-  //   ]
-  // }
 ];
 
 let currentProject = 0;
@@ -89,6 +123,8 @@ function loadPair(idx) {
   document.getElementById('beforeImg').src = pair.before;
   document.getElementById('afterImg').src  = pair.after;
   document.getElementById('pairLabel').textContent = pair.label;
+  const noteEl = document.getElementById('pairNote');
+  if (noteEl) { noteEl.textContent = pair.note || ''; noteEl.style.display = pair.note ? '' : 'none'; }
   setSliderPos(50);
   document.querySelectorAll('.pair-dot').forEach((d, i) => d.classList.toggle('active', i === idx));
 }

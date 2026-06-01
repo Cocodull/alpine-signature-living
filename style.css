@@ -880,11 +880,12 @@ section { padding: 8rem 0; }
 
 .pair-label {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   font-style: italic;
   color: var(--cream);
-  min-width: 180px;
+  min-width: 220px;
   text-align: center;
+  letter-spacing: 0.01em;
 }
 
 .pair-dots {
@@ -904,17 +905,30 @@ section { padding: 8rem 0; }
 
 .pair-dot.active { background: var(--gold); }
 
+.pair-note {
+  max-width: 780px;
+  margin: 1.5rem auto 0;
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  font-style: italic;
+  color: rgba(245,241,235,0.65);
+  line-height: 1.7;
+  min-height: 1.5em;
+}
+
 /* Slider */
 .slider-wrap {
   position: relative;
   width: 100%;
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
   overflow: hidden;
-  aspect-ratio: 16/10;
+  aspect-ratio: 16/9;
   cursor: ew-resize;
   user-select: none;
-  border: 1px solid var(--rule);
+  border: none;
+  box-shadow: 0 32px 80px rgba(28,28,28,0.35);
 }
 
 .slider-before, .slider-after {

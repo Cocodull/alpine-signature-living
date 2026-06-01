@@ -241,71 +241,92 @@ const PROJECTS = [
       {
         label: { en: "Entrance", fr: "Entrée" },
         note: {
-          en: "The entrance hall was reconfigured entirely — eliminating wasted circulation space and creating a proper sense of arrival, with new built-in storage that defines the threshold between outside and in.",
-          fr: "Le couloir d'entrée a été entièrement reconfiguré — supprimant l'espace de circulation perdu et créant une véritable sensation d'arrivée, avec un nouveau rangement intégré qui délimite le seuil entre l'extérieur et l'intérieur."
+          en: "The wall panelling was painted in a natural, chalky light grey — a quiet but decisive shift. The cupboard doors were refinished to replace the original orange tones with a more harmonious, natural palette.",
+          fr: "Le lambris a été peint avec une peinture naturelle gris clair, très mat et crayeuse. Les portes des placards ont été retravaillées pour remplacer les tons oranges originels par une teinte plus harmonieuse et naturelle."
         },
-        before: "images/ovronnaz/entrance-before.jpg",
-        after:  "images/ovronnaz/entrance-after.jpg"
+        before: "images/ovronnaz/s02-before.jpg",
+        after:  "images/ovronnaz/s02-after.jpg"
       },
       {
-        label: { en: "Entrance — Cupboards", fr: "Entrée — Rangements" },
+        label: { en: "Entrance — Floor & Light", fr: "Entrée — Sol & Lumière" },
         note: {
-          en: "Looking in from the main door: the new built-in cupboards replaced a cluttered wall and gave the entrance its sense of order and calm. The view through the apartment opens immediately.",
-          fr: "Depuis la porte d'entrée : les nouveaux placards intégrés ont remplacé un mur encombré et apporté ordre et sérénité à l'entrée. La perspective sur l'appartement s'ouvre immédiatement."
+          en: "The floor was laid with textured anthracite black tiles, creating coherence and a sense of quiet luxury. The cold white chandelier was replaced by warm-light spotlights — more welcoming, more considered.",
+          fr: "Le sol est recouvert de carrelage anthracite texturisé, créant une harmonie dans la pièce et une sensation de luxe. La lumière blanche du lustre a été remplacée par des spots de lumière chaude, bien plus accueillants."
         },
-        before: "images/ovronnaz/entrance-2-before.jpg",
-        after:  "images/ovronnaz/entrance-2-after.jpg"
+        before: "images/ovronnaz/s03-before.jpg",
+        after:  "images/ovronnaz/s03-after.jpg"
+      },
+      {
+        label: { en: "Bedroom — Cabinets", fr: "Chambre — Placards" },
+        note: {
+          en: "The solid-wood cabinet doors were sandblasted rather than replaced — creating a textured, three-dimensional surface — then oiled with a Châtaigne N68 finish to highlight the natural grain and harmonise with the reclaimed wood on the walls.",
+          fr: "Les portes de placards en bois massif ont été sablées plutôt que remplacées — créant une surface texturée et tridimensionnelle — puis huilées avec une teinte N68 Châtaigne pour mettre en valeur le veinage naturel et s'harmoniser avec le vieux bois des murs."
+        },
+        before: "images/ovronnaz/s04-before.jpg",
+        after:  "images/ovronnaz/s04-after.jpg"
+      },
+      {
+        label: { en: "Bedroom — Walls & Floor", fr: "Chambre — Murs & Sol" },
+        note: {
+          en: "Reclaimed wood on the walls brings a warmth and sophistication the original panelling could not achieve. The floor was laid with natural oak — rustic and luminous in equal measure.",
+          fr: "Le vieux bois au mur apporte une sophistication et une chaleur que le lambris original ne pouvait offrir. Le sol est recouvert de chêne naturel, dans la continuité d'une esthétique rustique et lumineuse."
+        },
+        before: "images/ovronnaz/s05-before.jpg",
+        after:  "images/ovronnaz/s05-after.jpg"
       },
       {
         label: { en: "Living Room", fr: "Séjour" },
         note: {
-          en: "The living space was stripped back and rethought — a lighter, more considered palette replacing the dated heavy finishes. The room now breathes.",
-          fr: "Le séjour a été dépouillé et repensé — une palette plus claire et plus réfléchie remplaçant les finitions lourdes d'époque. La pièce respire désormais."
+          en: "The fireplace and its adjacent concrete bench dominated the room entirely. Their removal freed a significant amount of space. The false ceiling beams were also removed — immediately making the room feel taller and larger.",
+          fr: "La cheminée et le banc en béton adjacent dominaient entièrement le séjour. Leur suppression a libéré une surface considérable. Les fausses poutres au plafond ont été retirées, rendant la pièce immédiatement plus haute et plus grande."
         },
-        before: "images/ovronnaz/living-room-before.jpg",
-        after:  "images/ovronnaz/living-room-after.jpg"
+        before: "images/ovronnaz/s06-before.jpg",
+        after:  "images/ovronnaz/s06-after.jpg"
       },
       {
         label: { en: "Kitchen", fr: "Cuisine" },
         note: {
-          en: "A full kitchen redesign — new layout, new materials, the worktop and cabinetry rebuilt from scratch. The kitchen now connects naturally with the living area rather than feeling like a separate box.",
-          fr: "Une refonte complète de la cuisine — nouveau plan, nouveaux matériaux, plan de travail et rangements entièrement reconstruits. La cuisine s'articule désormais naturellement avec le séjour plutôt que d'en être isolée."
+          en: "The bar was imposing — dominating the kitchen and making an already dark space feel smaller. Its removal opened the room entirely, creating space for a proper dining table and a natural flow between kitchen and living area.",
+          fr: "Le bar était très imposant — il dominait la cuisine et rendait l'espace sombre encore plus petit. Sa suppression a ouvert le volume, créant de la place pour une grande table et une fluidité naturelle entre cuisine et séjour."
         },
-        before: "images/ovronnaz/kitchen-before-2.jpg",
-        after:  "images/ovronnaz/kitchen-after-2.jpg"
+        before: "images/ovronnaz/s07-before.jpg",
+        after:  ["images/ovronnaz/s07-after-1.jpg", "images/ovronnaz/s07-after-2.jpg"]
       },
       {
-        label: { en: "Bedroom", fr: "Chambre" },
+        label: { en: "Living & Kitchen — The Result", fr: "Séjour & Cuisine — Le résultat" },
         note: {
-          en: "The bedroom was stripped back and rethought — calm, considered, and properly proportioned. The new layout maximises the sense of space and light.",
-          fr: "La chambre a été dépouillée et repensée — calme, réfléchie et correctement proportionnée. Le nouvel agencement maximise la sensation d'espace et de lumière."
+          en: "With all changes made — and the floors unified with the same natural oak as the bedroom — the space found its harmony. Warm, considered, with an unmistakable sense of comfort and quiet luxury.",
+          fr: "Avec tous ces changements — et les sols unifiés avec le même chêne naturel que dans la chambre — la pièce a trouvé toute son harmonie. Chaleureuse, réfléchie, avec un sentiment indéniable de confort et de luxe discret."
         },
-        before: "images/ovronnaz/bedroom-before-1.jpg",
-        after:  "images/ovronnaz/bedroom-after-1.jpg"
-      },
-      {
-        label: { en: "Bedroom — Second View", fr: "Chambre — Deuxième vue" },
-        note: { en: "", fr: "" },
-        before: "images/ovronnaz/bedroom-before-2.jpg",
-        after:  "images/ovronnaz/bedroom-after-2.jpg"
+        before: "images/ovronnaz/s08-before.jpg",
+        after:  "images/ovronnaz/s08-after.jpg"
       },
       {
         label: { en: "Corridor & Bathroom", fr: "Couloir & Salle de bain" },
         note: {
           en: "The corridor held significant lost space, and the original bathroom was too small. By pushing back the walls, we created a generous bathroom volume with dedicated built-in storage and a separate column for the washer-dryer.",
-          fr: "Le couloir recélait un espace important perdu, et la salle de bain d'origine était trop petite. En repoussant les murs, nous avons créé un volume généreux avec des rangements intégrés dédiés et un espace séparé pour la colonne lavante-séchante."
+          fr: "Le couloir recélait un espace perdu important, et la salle de bain d'origine était trop petite. En repoussant les murs, nous avons créé un volume généreux avec des rangements dédiés et une colonne séparée pour la machine à laver."
         },
-        before: "images/ovronnaz/corridor-bathroom-before.jpg",
-        after:  "images/ovronnaz/corridor-bathroom-after.jpg"
+        before: "images/ovronnaz/s09-before.jpg",
+        after:  "images/ovronnaz/s09-after.jpg"
       },
       {
         label: { en: "Bathroom", fr: "Salle de bain" },
         note: {
-          en: "A window onto the corridor was removed entirely — freeing the wall, eliminating visual clutter, and adding a bespoke reclaimed-wood shelf in its place. A small intervention that transformed the atmosphere of the room.",
-          fr: "Une fenêtre donnant sur le couloir a été supprimée — libérant le mur, éliminant la confusion visuelle et laissant place à une étagère sur mesure en bois ancien. Une petite intervention qui a transformé l'atmosphère de la pièce."
+          en: "The bathroom was reimagined with new tiling and fixtures. Three views showing the transformation from different angles.",
+          fr: "La salle de bain a été entièrement repensée avec de nouveaux carrelages et équipements. Trois vues montrant la transformation sous différents angles."
         },
-        before: "images/ovronnaz/bathroom-before.jpg",
-        after:  "images/ovronnaz/bathroom-after.jpg"
+        before: "images/ovronnaz/s10-before.jpg",
+        after:  ["images/ovronnaz/s10-after-1.jpg", "images/ovronnaz/s10-after-2.jpg"]
+      },
+      {
+        label: { en: "Shower", fr: "Douche" },
+        note: {
+          en: "The shower was cramped and dark. By replacing the solid walls and tray with glass, we gained both space and light — creating a larger shower and a bathroom that finally breathes.",
+          fr: "La douche était étroite et sombre. En remplaçant les murs pleins et le bac par du verre, nous avons gagné espace et lumière — pour une douche plus grande et une salle de bain qui respire enfin."
+        },
+        before: "images/ovronnaz/s11-before.jpg",
+        after:  "images/ovronnaz/s11-after.jpg"
       }
     ]
   }
@@ -345,18 +366,26 @@ function buildRenovationCards() {
     const label = pair.label[currentLang] || pair.label.en;
     const note  = (pair.note[currentLang] || pair.note.en || '').trim();
 
+    const beforeLabel = currentLang === 'fr' ? 'Avant' : 'Before';
+    const afterLabel  = currentLang === 'fr' ? 'Après' : 'After';
+    const afters = Array.isArray(pair.after) ? pair.after : [pair.after];
+    const total  = 1 + afters.length;
+
+    const afterCols = afters.map(src => `
+      <div class="room-photo-col">
+        <img src="${src}" alt="${label} — ${afterLabel}" loading="lazy">
+        <span class="photo-tag apres-tag">${afterLabel}</span>
+      </div>`).join('');
+
     const card = document.createElement('div');
     card.className = 'room-card';
     card.innerHTML = `
-      <div class="room-photos">
+      <div class="room-photos room-photos-${total}">
         <div class="room-photo-col">
-          <img src="${pair.before}" alt="${label} — Avant" loading="lazy">
-          <span class="photo-tag avant-tag">Avant</span>
+          <img src="${pair.before}" alt="${label} — ${beforeLabel}" loading="lazy">
+          <span class="photo-tag avant-tag">${beforeLabel}</span>
         </div>
-        <div class="room-photo-col">
-          <img src="${pair.after}" alt="${label} — Après" loading="lazy">
-          <span class="photo-tag apres-tag">Après</span>
-        </div>
+        ${afterCols}
       </div>
       <div class="room-info">
         <span class="room-num">${String(i + 1).padStart(2, '0')}</span>

@@ -896,6 +896,10 @@ section { padding: 8rem 0; }
   gap: 3px;
 }
 
+.room-photos-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 .room-photo-col {
   position: relative;
   aspect-ratio: 4/3;

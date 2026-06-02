@@ -243,15 +243,6 @@ const PROJECTS = [
     },
     pairs: [
       {
-        label: { en: "Living Room", fr: "Séjour" },
-        note: {
-          en: "The fireplace and adjacent concrete bench dominated the room and claimed significant space. Their removal — along with the false ceiling beams — opened the volume entirely and made the room feel markedly larger.",
-          fr: "La cheminée et le banc en béton adjacent dominaient la pièce et prenaient beaucoup de place. Leur suppression — ainsi que les fausses poutres au plafond — a ouvert le volume et rendu la pièce bien plus grande."
-        },
-        before: "images/ovronnaz/s06-before.jpg",
-        after:  "images/ovronnaz/s06-after.jpg"
-      },
-      {
         label: { en: "Living & Kitchen — The Result", fr: "Séjour & Cuisine — Le résultat" },
         note: {
           en: "With all changes made — and the floors unified with the same natural oak as the bedroom — the space found its harmony. Warm, considered, with an unmistakable sense of comfort and quiet luxury.",
@@ -259,6 +250,15 @@ const PROJECTS = [
         },
         before: "images/ovronnaz/s08-before.jpg",
         after:  "images/ovronnaz/s08-after.jpg"
+      },
+      {
+        label: { en: "Living Room", fr: "Séjour" },
+        note: {
+          en: "The fireplace and adjacent concrete bench dominated the room and claimed significant space. Their removal — along with the false ceiling beams — opened the volume entirely and made the room feel markedly larger.",
+          fr: "La cheminée et le banc en béton adjacent dominaient la pièce et prenaient beaucoup de place. Leur suppression — ainsi que les fausses poutres au plafond — a ouvert le volume et rendu la pièce bien plus grande."
+        },
+        before: "images/ovronnaz/s06-before.jpg",
+        after:  "images/ovronnaz/s06-after.jpg"
       },
       {
         label: { en: "Kitchen", fr: "Cuisine" },

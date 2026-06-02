@@ -317,11 +317,20 @@ const PROJECTS = [
       {
         label: { en: "Bathroom", fr: "Salle de bain" },
         note: {
-          en: "The bathroom was reimagined with new tiling and fixtures. Three views showing the transformation from different angles.",
-          fr: "La salle de bain a été entièrement repensée avec de nouveaux carrelages et équipements. Trois vues montrant la transformation sous différents angles."
+          en: "The bathroom was reimagined with new tiling and fixtures. The window above the radiator was removed, clearing the space and adding a bespoke reclaimed-wood shelf in its place.",
+          fr: "La salle de bain a été entièrement repensée. La fenêtre au-dessus du radiateur a été supprimée, dégageant l'espace et laissant place à une étagère en vieux bois sur mesure."
         },
         before: "images/ovronnaz/s10-before.jpg",
-        after:  ["images/ovronnaz/s10-after-1.jpg", "images/ovronnaz/s10-after-2.jpg"]
+        after:  "images/ovronnaz/s10-after.jpg"
+      },
+      {
+        label: { en: "Bathroom — Second View", fr: "Salle de bain — Deuxième vue" },
+        note: {
+          en: "A second angle of the bathroom transformation, showing the full scope of the renovation.",
+          fr: "Un deuxième angle de la transformation de la salle de bain, montrant l'ampleur complète de la rénovation."
+        },
+        before: "images/ovronnaz/s11-before.jpg",
+        after:  "images/ovronnaz/s11-after.jpg"
       },
       {
         label: { en: "Shower", fr: "Douche" },
@@ -329,9 +338,8 @@ const PROJECTS = [
           en: "The shower was cramped and dark. By replacing the solid walls and tray with glass, we gained both space and light — creating a larger shower and a bathroom that finally breathes.",
           fr: "La douche était étroite et sombre. En remplaçant les murs pleins et le bac par du verre, nous avons gagné espace et lumière — pour une douche plus grande et une salle de bain qui respire enfin."
         },
-        portrait: true,
-        before: "images/ovronnaz/s11-before.jpg",
-        after:  "images/ovronnaz/s11-after.jpg"
+        before: "images/ovronnaz/s12-before.jpg",
+        after:  "images/ovronnaz/s12-after.jpg"
       },
       {
         label: { en: "Floor Plan", fr: "Plan d'appartement" },

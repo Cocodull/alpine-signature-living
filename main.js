@@ -591,7 +591,6 @@ const TZ_PHOTOS = [
   'images/tzoumaz/tzoumaz-28.jpg',
   'images/tzoumaz/tzoumaz-30.jpg',
   'images/tzoumaz/tzoumaz-27.jpg',
-  'images/tzoumaz/tzoumaz-16.jpg',
   'images/tzoumaz/tzoumaz-22.jpg',
   // Kitchen
   'images/tzoumaz/tzoumaz-20.jpg',

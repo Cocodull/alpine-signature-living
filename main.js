@@ -259,7 +259,6 @@ const PROJECTS = [
           fr: "Le sol est recouvert de carrelage anthracite texturisé, créant une harmonie dans la pièce et une sensation de luxe. La lumière blanche du lustre a été remplacée par des spots de lumière chaude, bien plus accueillants."
         },
         portrait: true,
-        swapLabels: true,
         before: "images/ovronnaz/s03-after.jpg",
         after:  "images/ovronnaz/s03-before.jpg"
       },
@@ -359,6 +358,34 @@ function buildProjectTabs() {
   container.style.display = PROJECTS.length > 1 ? 'flex' : 'none';
 }
 
+// ── Before/After comparison slider ──
+function initCompare(el) {
+  function setPos(x) {
+    const rect = el.getBoundingClientRect();
+    const pct  = Math.max(5, Math.min(95, ((x - rect.left) / rect.width) * 100));
+    el.style.setProperty('--pos', pct + '%');
+  }
+  let startX = 0;
+  el.addEventListener('mousedown', e => {
+    if (e.button !== 0) return;
+    startX = e.clientX;
+    el.dataset.dragged = '0';
+    const move = e => {
+      if (Math.abs(e.clientX - startX) > 4) el.dataset.dragged = '1';
+      setPos(e.clientX);
+    };
+    const up = () => { window.removeEventListener('mousemove', move); window.removeEventListener('mouseup', up); };
+    window.addEventListener('mousemove', move);
+    window.addEventListener('mouseup', up);
+    e.preventDefault();
+  });
+  el.addEventListener('touchmove', e => {
+    el.dataset.dragged = '1';
+    setPos(e.touches[0].clientX);
+    e.preventDefault();
+  }, { passive: false });
+}
+
 // ── Editorial renovation cards ──
 function buildRenovationCards() {
   const proj = PROJECTS[currentProject];
@@ -401,30 +428,32 @@ function buildRenovationCards() {
       slide.innerHTML = `<div class="room-solo"><img src="${pair.solo}" alt="${label}" loading="lazy"></div>`;
       slide.querySelector('img').addEventListener('click', e => openLightbox(e.target.src));
     } else {
-      const heroLabel  = pair.swapLabels ? beforeLabel : afterLabel;
-      const insetLabel = pair.swapLabels ? afterLabel  : beforeLabel;
-      const afters     = Array.isArray(pair.after) ? pair.after : [pair.after];
-      const heroAfter  = afters[0];
-      const extras     = afters.slice(1);
-      const extrasHTML = extras.length ? `<div class="room-extra-afters">${extras.map(s =>
-        `<img src="${s}" alt="${heroLabel}" loading="lazy">`).join('')}</div>` : '';
+      const afters    = Array.isArray(pair.after) ? pair.after : [pair.after];
+      const mainAfter = afters[0];
+      const extras    = afters.slice(1);
+      const extrasHTML = extras.length ? `<div class="room-extra-afters">${
+        extras.map(s => `<img src="${s}" alt="${afterLabel}" loading="lazy">`).join('')
+      }</div>` : '';
 
       slide.innerHTML = `
-        <div class="room-hero">
-          <img class="room-after-img" src="${heroAfter}" alt="${heroLabel}" loading="lazy">
-          <div class="room-before-inset">
-            <img src="${pair.before}" alt="${insetLabel}" loading="lazy">
-            <span class="inset-label">${insetLabel}</span>
-          </div>
-          <span class="room-after-label">${heroLabel}</span>
+        <div class="compare" style="--pos: 50%">
+          <div class="compare-before"><img src="${pair.before}" alt="${beforeLabel}" loading="lazy"></div>
+          <div class="compare-after"><img src="${mainAfter}" alt="${afterLabel}" loading="lazy"></div>
+          <div class="compare-handle"><span class="compare-knob">&#9668;&nbsp;&#9658;</span></div>
+          <span class="compare-lbl compare-lbl-b">${beforeLabel}</span>
+          <span class="compare-lbl compare-lbl-a">${afterLabel}</span>
         </div>
         ${extrasHTML}`;
 
-      slide.querySelector('.room-hero').addEventListener('click', e => {
-        if (!e.target.closest('.room-before-inset')) openLightbox(heroAfter);
-      });
-      slide.querySelector('.room-before-inset').addEventListener('click', e => {
-        e.stopPropagation(); openLightbox(pair.before);
+      const cmp = slide.querySelector('.compare');
+      initCompare(cmp);
+      cmp.addEventListener('click', e => {
+        if (cmp.dataset.dragged === '1') { cmp.dataset.dragged = '0'; return; }
+        const rect = cmp.getBoundingClientRect();
+        const pct  = parseFloat(cmp.style.getPropertyValue('--pos'));
+        (e.clientX - rect.left) / rect.width * 100 < pct
+          ? openLightbox(pair.before)
+          : openLightbox(mainAfter);
       });
       slide.querySelectorAll('.room-extra-afters img').forEach(img =>
         img.addEventListener('click', () => openLightbox(img.src)));
@@ -470,8 +499,20 @@ function buildRenovationCards() {
     if (Math.abs(dx) > 50) dx < 0 ? goTo(current + 1) : goTo(current - 1);
   });
 
+  renoNav = { go: goTo, get idx() { return current; } };
   goTo(0);
 }
+
+let renoNav = null;
+document.addEventListener('keydown', e => {
+  if (!renoNav) return;
+  const section = document.getElementById('renovationCards');
+  if (!section) return;
+  const rect = section.getBoundingClientRect();
+  if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+  if (e.key === 'ArrowLeft')  { e.preventDefault(); renoNav.go(renoNav.idx - 1); }
+  if (e.key === 'ArrowRight') { e.preventDefault(); renoNav.go(renoNav.idx + 1); }
+});
 
 // ── Category tabs ──
 document.querySelectorAll('.cat-tab').forEach(btn => {

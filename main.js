@@ -248,8 +248,9 @@ const PROJECTS = [
           en: "The wall panelling was painted in a natural, chalky light grey — a quiet but decisive shift. The cupboard doors were refinished to replace the original orange tones with a more harmonious, natural palette.",
           fr: "Le lambris a été peint avec une peinture naturelle gris clair, très mat et crayeuse. Les portes des placards ont été retravaillées pour remplacer les tons oranges originels par une teinte plus harmonieuse et naturelle."
         },
-        before: "images/ovronnaz/s02-after.jpg",
-        after:  "images/ovronnaz/s02-before.jpg"
+        portrait: true,
+        before: "images/ovronnaz/s02-before.jpg",
+        after:  "images/ovronnaz/s02-after.jpg"
       },
       {
         label: { en: "Entrance — Floor & Light", fr: "Entrée — Sol & Lumière" },

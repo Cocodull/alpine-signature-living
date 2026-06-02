@@ -243,22 +243,31 @@ const PROJECTS = [
     },
     pairs: [
       {
-        label: { en: "Entrance", fr: "Entrée" },
+        label: { en: "Living Room", fr: "Séjour" },
         note: {
-          en: "The wall panelling was painted in a natural, chalky light grey — a quiet but decisive shift. The cupboard doors were refinished to replace the original orange tones with a more harmonious, natural palette.",
-          fr: "Le lambris a été peint avec une peinture naturelle gris clair, très mat et crayeuse. Les portes des placards ont été retravaillées pour remplacer les tons oranges originels par une teinte plus harmonieuse et naturelle."
+          en: "The fireplace and adjacent concrete bench dominated the room and claimed significant space. Their removal — along with the false ceiling beams — opened the volume entirely and made the room feel markedly larger.",
+          fr: "La cheminée et le banc en béton adjacent dominaient la pièce et prenaient beaucoup de place. Leur suppression — ainsi que les fausses poutres au plafond — a ouvert le volume et rendu la pièce bien plus grande."
         },
-        before: "images/ovronnaz/s02-before.jpg",
-        after:  "images/ovronnaz/s02-after.jpg"
+        before: "images/ovronnaz/s06-before.jpg",
+        after:  "images/ovronnaz/s06-after.jpg"
       },
       {
-        label: { en: "Entrance — Floor & Light", fr: "Entrée — Sol & Lumière" },
+        label: { en: "Living & Kitchen — The Result", fr: "Séjour & Cuisine — Le résultat" },
         note: {
-          en: "The floor was laid with textured anthracite black tiles, creating coherence and a sense of quiet luxury. The cold white chandelier was replaced by warm-light spotlights — more welcoming, more considered.",
-          fr: "Le sol est recouvert de carrelage anthracite texturisé, créant une harmonie dans la pièce et une sensation de luxe. La lumière blanche du lustre a été remplacée par des spots de lumière chaude, bien plus accueillants."
+          en: "With all changes made — and the floors unified with the same natural oak as the bedroom — the space found its harmony. Warm, considered, with an unmistakable sense of comfort and quiet luxury.",
+          fr: "Avec tous ces changements — et les sols unifiés avec le même chêne naturel que dans la chambre — la pièce a trouvé toute son harmonie. Chaleureuse, réfléchie, avec un sentiment indéniable de confort et de luxe discret."
         },
-        before: "images/ovronnaz/s03-after.jpg",
-        after:  "images/ovronnaz/s03-before.jpg"
+        before: "images/ovronnaz/s08-before.jpg",
+        after:  "images/ovronnaz/s08-after.jpg"
+      },
+      {
+        label: { en: "Kitchen", fr: "Cuisine" },
+        note: {
+          en: "The bar was imposing — dominating the kitchen and making an already dark space feel smaller. Its removal opened the room entirely, creating space for a proper dining table and a natural flow between kitchen and living area.",
+          fr: "Le bar était très imposant — il dominait la cuisine et rendait l'espace sombre encore plus petit. Sa suppression a ouvert le volume, créant de la place pour une grande table et une fluidité naturelle entre cuisine et séjour."
+        },
+        before: "images/ovronnaz/s07-before.jpg",
+        after:  "images/ovronnaz/s07-after.jpg"
       },
       {
         label: { en: "Bedroom — Cabinets", fr: "Chambre — Placards" },
@@ -277,33 +286,6 @@ const PROJECTS = [
         },
         before: "images/ovronnaz/s05-before.jpg",
         after:  "images/ovronnaz/s05-after.jpg"
-      },
-      {
-        label: { en: "Living Room", fr: "Séjour" },
-        note: {
-          en: "The fireplace and adjacent concrete bench dominated the room and claimed significant space. Their removal — along with the false ceiling beams — opened the volume entirely and made the room feel markedly larger.",
-          fr: "La cheminée et le banc en béton adjacent dominaient la pièce et prenaient beaucoup de place. Leur suppression — ainsi que les fausses poutres au plafond — a ouvert le volume et rendu la pièce bien plus grande."
-        },
-        before: "images/ovronnaz/s06-before.jpg",
-        after:  "images/ovronnaz/s06-after.jpg"
-      },
-      {
-        label: { en: "Kitchen", fr: "Cuisine" },
-        note: {
-          en: "The bar was imposing — dominating the kitchen and making an already dark space feel smaller. Its removal opened the room entirely, creating space for a proper dining table and a natural flow between kitchen and living area.",
-          fr: "Le bar était très imposant — il dominait la cuisine et rendait l'espace sombre encore plus petit. Sa suppression a ouvert le volume, créant de la place pour une grande table et une fluidité naturelle entre cuisine et séjour."
-        },
-        before: "images/ovronnaz/s07-before.jpg",
-        after:  "images/ovronnaz/s07-after.jpg"
-      },
-      {
-        label: { en: "Living & Kitchen — The Result", fr: "Séjour & Cuisine — Le résultat" },
-        note: {
-          en: "With all changes made — and the floors unified with the same natural oak as the bedroom — the space found its harmony. Warm, considered, with an unmistakable sense of comfort and quiet luxury.",
-          fr: "Avec tous ces changements — et les sols unifiés avec le même chêne naturel que dans la chambre — la pièce a trouvé toute son harmonie. Chaleureuse, réfléchie, avec un sentiment indéniable de confort et de luxe discret."
-        },
-        before: "images/ovronnaz/s08-before.jpg",
-        after:  "images/ovronnaz/s08-after.jpg"
       },
       {
         label: { en: "Corridor & Bathroom", fr: "Couloir & Salle de bain" },
@@ -340,6 +322,24 @@ const PROJECTS = [
         },
         before: "images/ovronnaz/s12-before.jpg",
         after:  "images/ovronnaz/s12-after.jpg"
+      },
+      {
+        label: { en: "Entrance", fr: "Entrée" },
+        note: {
+          en: "The wall panelling was painted in a natural, chalky light grey — a quiet but decisive shift. The cupboard doors were refinished to replace the original orange tones with a more harmonious, natural palette.",
+          fr: "Le lambris a été peint avec une peinture naturelle gris clair, très mat et crayeuse. Les portes des placards ont été retravaillées pour remplacer les tons oranges originels par une teinte plus harmonieuse et naturelle."
+        },
+        before: "images/ovronnaz/s02-before.jpg",
+        after:  "images/ovronnaz/s02-after.jpg"
+      },
+      {
+        label: { en: "Entrance — Floor & Light", fr: "Entrée — Sol & Lumière" },
+        note: {
+          en: "The floor was laid with textured anthracite black tiles, creating coherence and a sense of quiet luxury. The cold white chandelier was replaced by warm-light spotlights — more welcoming, more considered.",
+          fr: "Le sol est recouvert de carrelage anthracite texturisé, créant une harmonie dans la pièce et une sensation de luxe. La lumière blanche du lustre a été remplacée par des spots de lumière chaude, bien plus accueillants."
+        },
+        before: "images/ovronnaz/s03-after.jpg",
+        after:  "images/ovronnaz/s03-before.jpg"
       },
       {
         label: { en: "Floor Plan", fr: "Plan d'appartement" },

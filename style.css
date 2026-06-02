@@ -944,6 +944,19 @@ section { padding: 8rem 0; }
   background: #111;
 }
 
+.solo-photo-col {
+  aspect-ratio: unset !important;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.solo-photo-col img {
+  position: static !important;
+  width: 100% !important;
+  height: auto !important;
+  object-fit: unset !important;
+}
+
 .photo-tag {
   position: absolute;
   bottom: 1rem;

@@ -324,6 +324,14 @@ const PROJECTS = [
         portrait: true,
         before: "images/ovronnaz/s11-before.jpg",
         after:  "images/ovronnaz/s11-after.jpg"
+      },
+      {
+        label: { en: "Floor Plan", fr: "Plan d'appartement" },
+        note: {
+          en: "The renovation scope at a glance — walls removed, the bathroom expanded into the corridor, a new Italian shower added, and every surface reimagined. Total interior surface: 54.8 m².",
+          fr: "Le périmètre de la rénovation en un coup d'œil — murs abattus, salle de bain élargie sur le couloir, douche italienne créée, chaque surface repensée. Surface intérieure totale : 54,8 m²."
+        },
+        solo: "images/ovronnaz/plan.jpg"
       }
     ]
   }
@@ -364,38 +372,55 @@ function buildRenovationCards() {
   proj.pairs.forEach((pair, i) => {
     const label = pair.label[currentLang] || pair.label.en;
     const note  = (pair.note[currentLang] || pair.note.en || '').trim();
+    const card  = document.createElement('div');
 
-    const beforeLabel = currentLang === 'fr' ? 'Avant' : 'Before';
-    const afterLabel  = currentLang === 'fr' ? 'Après' : 'After';
-    const afters = Array.isArray(pair.after) ? pair.after : [pair.after];
-    const total  = 1 + afters.length;
+    if (pair.solo) {
+      card.className = 'room-card';
+      card.innerHTML = `
+        <div class="room-photos room-photos-1">
+          <div class="room-photo-col solo-photo-col">
+            <img src="${pair.solo}" alt="${label}" loading="lazy">
+          </div>
+        </div>
+        <div class="room-info">
+          <span class="room-num">${String(i + 1).padStart(2, '0')}</span>
+          <div class="room-info-text">
+            <h3 class="room-name">${label}</h3>
+            ${note ? `<p class="room-note">${note}</p>` : ''}
+          </div>
+        </div>
+      `;
+    } else {
+      const beforeLabel = currentLang === 'fr' ? 'Avant' : 'Before';
+      const afterLabel  = currentLang === 'fr' ? 'Après' : 'After';
+      const afters = Array.isArray(pair.after) ? pair.after : [pair.after];
+      const total  = 1 + afters.length;
 
-    const afterCols = afters.map(src => `
-      <div class="room-photo-col">
-        <img src="${src}" alt="${label} — ${afterLabel}" loading="lazy">
-        <span class="photo-tag apres-tag">${afterLabel}</span>
-      </div>`).join('');
-
-    const card = document.createElement('div');
-    card.className = pair.portrait ? 'room-card portrait-card' : 'room-card';
-    card.innerHTML = `
-      <div class="room-photos room-photos-${total}">
+      const afterCols = afters.map(src => `
         <div class="room-photo-col">
-          <img src="${pair.before}" alt="${label} — ${beforeLabel}" loading="lazy">
-          <span class="photo-tag avant-tag">${beforeLabel}</span>
-        </div>
-        ${afterCols}
-      </div>
-      <div class="room-info">
-        <span class="room-num">${String(i + 1).padStart(2, '0')}</span>
-        <div class="room-info-text">
-          <h3 class="room-name">${label}</h3>
-          ${note ? `<p class="room-note">${note}</p>` : ''}
-        </div>
-      </div>
-    `;
+          <img src="${src}" alt="${label} — ${afterLabel}" loading="lazy">
+          <span class="photo-tag apres-tag">${afterLabel}</span>
+        </div>`).join('');
 
-    // Lightbox on click
+      card.className = pair.portrait ? 'room-card portrait-card' : 'room-card';
+      card.innerHTML = `
+        <div class="room-photos room-photos-${total}">
+          <div class="room-photo-col">
+            <img src="${pair.before}" alt="${label} — ${beforeLabel}" loading="lazy">
+            <span class="photo-tag avant-tag">${beforeLabel}</span>
+          </div>
+          ${afterCols}
+        </div>
+        <div class="room-info">
+          <span class="room-num">${String(i + 1).padStart(2, '0')}</span>
+          <div class="room-info-text">
+            <h3 class="room-name">${label}</h3>
+            ${note ? `<p class="room-note">${note}</p>` : ''}
+          </div>
+        </div>
+      `;
+    }
+
     card.querySelectorAll('.room-photo-col img').forEach(img => {
       img.addEventListener('click', () => openLightbox(img.src));
     });

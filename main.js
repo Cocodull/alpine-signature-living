@@ -259,8 +259,9 @@ const PROJECTS = [
           fr: "Le sol est recouvert de carrelage anthracite texturisé, créant une harmonie dans la pièce et une sensation de luxe. La lumière blanche du lustre a été remplacée par des spots de lumière chaude, bien plus accueillants."
         },
         portrait: true,
-        before: "images/ovronnaz/s03-before.jpg",
-        after:  "images/ovronnaz/s03-after.jpg"
+        swapLabels: true,
+        before: "images/ovronnaz/s03-after.jpg",
+        after:  "images/ovronnaz/s03-before.jpg"
       },
       {
         label: { en: "Bedroom — Cabinets", fr: "Chambre — Placards" },
@@ -400,20 +401,22 @@ function buildRenovationCards() {
       slide.innerHTML = `<div class="room-solo"><img src="${pair.solo}" alt="${label}" loading="lazy"></div>`;
       slide.querySelector('img').addEventListener('click', e => openLightbox(e.target.src));
     } else {
+      const heroLabel  = pair.swapLabels ? beforeLabel : afterLabel;
+      const insetLabel = pair.swapLabels ? afterLabel  : beforeLabel;
       const afters     = Array.isArray(pair.after) ? pair.after : [pair.after];
       const heroAfter  = afters[0];
       const extras     = afters.slice(1);
       const extrasHTML = extras.length ? `<div class="room-extra-afters">${extras.map(s =>
-        `<img src="${s}" alt="${afterLabel}" loading="lazy">`).join('')}</div>` : '';
+        `<img src="${s}" alt="${heroLabel}" loading="lazy">`).join('')}</div>` : '';
 
       slide.innerHTML = `
         <div class="room-hero">
-          <img class="room-after-img" src="${heroAfter}" alt="${afterLabel}" loading="lazy">
+          <img class="room-after-img" src="${heroAfter}" alt="${heroLabel}" loading="lazy">
           <div class="room-before-inset">
-            <img src="${pair.before}" alt="${beforeLabel}" loading="lazy">
-            <span class="inset-label">${beforeLabel}</span>
+            <img src="${pair.before}" alt="${insetLabel}" loading="lazy">
+            <span class="inset-label">${insetLabel}</span>
           </div>
-          <span class="room-after-label">${afterLabel}</span>
+          <span class="room-after-label">${heroLabel}</span>
         </div>
         ${extrasHTML}`;
 

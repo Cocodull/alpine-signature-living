@@ -992,7 +992,7 @@ section { padding: 8rem 0; }
 .compare-after img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
   pointer-events: none;
 }
@@ -1037,13 +1037,13 @@ section { padding: 8rem 0; }
 }
 
 .compare-lbl-b {
-  right: 0.8rem;
+  left: 1rem;
   background: rgba(28,28,28,0.82);
   color: rgba(245,241,235,0.75);
 }
 
 .compare-lbl-a {
-  left: 0.8rem;
+  right: 1rem;
   background: rgba(168,137,108,0.88);
   color: var(--cream);
 }

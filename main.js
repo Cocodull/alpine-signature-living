@@ -257,8 +257,8 @@ const PROJECTS = [
           en: "The floor was laid with textured anthracite black tiles, creating coherence and a sense of quiet luxury. The cold white chandelier was replaced by warm-light spotlights — more welcoming, more considered.",
           fr: "Le sol est recouvert de carrelage anthracite texturisé, créant une harmonie dans la pièce et une sensation de luxe. La lumière blanche du lustre a été remplacée par des spots de lumière chaude, bien plus accueillants."
         },
-        before: "images/ovronnaz/s03-before.jpg",
-        after:  "images/ovronnaz/s03-after.jpg"
+        before: "images/ovronnaz/s03-after.jpg",
+        after:  "images/ovronnaz/s03-before.jpg"
       },
       {
         label: { en: "Bedroom — Cabinets", fr: "Chambre — Placards" },
@@ -443,7 +443,7 @@ function buildRenovationCards() {
       }</div>` : '';
 
       slide.innerHTML = `
-        <div class="compare" style="--pos: 40%">
+        <div class="compare" style="--pos: 30%">
           <div class="compare-before">
             <img src="${pair.before}" alt="${beforeLabel}" loading="lazy">
             <span class="compare-lbl compare-lbl-b">${beforeLabel}</span>

@@ -362,7 +362,7 @@ function buildProjectTabs() {
 function initCompare(el) {
   function setPos(x) {
     const rect = el.getBoundingClientRect();
-    const pct  = Math.max(5, Math.min(95, ((x - rect.left) / rect.width) * 100));
+    const pct  = Math.max(10, Math.min(90, ((x - rect.left) / rect.width) * 100));
     el.style.setProperty('--pos', pct + '%');
   }
   let startX = 0;
@@ -436,12 +436,16 @@ function buildRenovationCards() {
       }</div>` : '';
 
       slide.innerHTML = `
-        <div class="compare" style="--pos: 50%">
-          <div class="compare-before"><img src="${pair.before}" alt="${beforeLabel}" loading="lazy"></div>
-          <div class="compare-after"><img src="${mainAfter}" alt="${afterLabel}" loading="lazy"></div>
-          <div class="compare-handle"><span class="compare-knob">&#9668;&nbsp;&#9658;</span></div>
-          <span class="compare-lbl compare-lbl-b">${beforeLabel}</span>
-          <span class="compare-lbl compare-lbl-a">${afterLabel}</span>
+        <div class="compare" style="--pos: 40%">
+          <div class="compare-before">
+            <img src="${pair.before}" alt="${beforeLabel}" loading="lazy">
+            <span class="compare-lbl compare-lbl-b">${beforeLabel}</span>
+          </div>
+          <div class="compare-divider"><span class="compare-knob">&#9668;&nbsp;&#9658;</span></div>
+          <div class="compare-after">
+            <img src="${mainAfter}" alt="${afterLabel}" loading="lazy">
+            <span class="compare-lbl compare-lbl-a">${afterLabel}</span>
+          </div>
         </div>
         ${extrasHTML}`;
 
@@ -449,11 +453,7 @@ function buildRenovationCards() {
       initCompare(cmp);
       cmp.addEventListener('click', e => {
         if (cmp.dataset.dragged === '1') { cmp.dataset.dragged = '0'; return; }
-        const rect = cmp.getBoundingClientRect();
-        const pct  = parseFloat(cmp.style.getPropertyValue('--pos'));
-        (e.clientX - rect.left) / rect.width * 100 < pct
-          ? openLightbox(pair.before)
-          : openLightbox(mainAfter);
+        e.target.closest('.compare-before') ? openLightbox(pair.before) : openLightbox(mainAfter);
       });
       slide.querySelectorAll('.room-extra-afters img').forEach(img =>
         img.addEventListener('click', () => openLightbox(img.src)));

@@ -248,7 +248,6 @@ const PROJECTS = [
           en: "The wall panelling was painted in a natural, chalky light grey — a quiet but decisive shift. The cupboard doors were refinished to replace the original orange tones with a more harmonious, natural palette.",
           fr: "Le lambris a été peint avec une peinture naturelle gris clair, très mat et crayeuse. Les portes des placards ont été retravaillées pour remplacer les tons oranges originels par une teinte plus harmonieuse et naturelle."
         },
-        portrait: true,
         before: "images/ovronnaz/s02-before.jpg",
         after:  "images/ovronnaz/s02-after.jpg"
       },
@@ -258,9 +257,8 @@ const PROJECTS = [
           en: "The floor was laid with textured anthracite black tiles, creating coherence and a sense of quiet luxury. The cold white chandelier was replaced by warm-light spotlights — more welcoming, more considered.",
           fr: "Le sol est recouvert de carrelage anthracite texturisé, créant une harmonie dans la pièce et une sensation de luxe. La lumière blanche du lustre a été remplacée par des spots de lumière chaude, bien plus accueillants."
         },
-        portrait: true,
-        before: "images/ovronnaz/s03-after.jpg",
-        after:  "images/ovronnaz/s03-before.jpg"
+        before: "images/ovronnaz/s03-before.jpg",
+        after:  "images/ovronnaz/s03-after.jpg"
       },
       {
         label: { en: "Bedroom — Cabinets", fr: "Chambre — Placards" },
@@ -281,13 +279,22 @@ const PROJECTS = [
         after:  "images/ovronnaz/s05-after.jpg"
       },
       {
+        label: { en: "Living Room", fr: "Séjour" },
+        note: {
+          en: "The fireplace and adjacent concrete bench dominated the room and claimed significant space. Their removal — along with the false ceiling beams — opened the volume entirely and made the room feel markedly larger.",
+          fr: "La cheminée et le banc en béton adjacent dominaient la pièce et prenaient beaucoup de place. Leur suppression — ainsi que les fausses poutres au plafond — a ouvert le volume et rendu la pièce bien plus grande."
+        },
+        before: "images/ovronnaz/s06-before.jpg",
+        after:  "images/ovronnaz/s06-after.jpg"
+      },
+      {
         label: { en: "Kitchen", fr: "Cuisine" },
         note: {
           en: "The bar was imposing — dominating the kitchen and making an already dark space feel smaller. Its removal opened the room entirely, creating space for a proper dining table and a natural flow between kitchen and living area.",
           fr: "Le bar était très imposant — il dominait la cuisine et rendait l'espace sombre encore plus petit. Sa suppression a ouvert le volume, créant de la place pour une grande table et une fluidité naturelle entre cuisine et séjour."
         },
         before: "images/ovronnaz/s07-before.jpg",
-        after:  "images/ovronnaz/s07-after-2.jpg"
+        after:  "images/ovronnaz/s07-after.jpg"
       },
       {
         label: { en: "Living & Kitchen — The Result", fr: "Séjour & Cuisine — Le résultat" },

@@ -569,9 +569,41 @@ if (nbSlider) {
 }
 
 // ── La Tzoumaz slider ──
-const TZ_PHOTOS = Array.from({length: 27}, (_, i) =>
-  `images/tzoumaz/tzoumaz-${String(i + 1).padStart(2, '0')}.jpg`
-);
+const TZ_PHOTOS = [
+  // Living room — fireplace hero first
+  'images/tzoumaz/tzoumaz-18.jpg',
+  'images/tzoumaz/tzoumaz-17.jpg',
+  'images/tzoumaz/tzoumaz-19.jpg',
+  'images/tzoumaz/tzoumaz-27.jpg',
+  'images/tzoumaz/tzoumaz-16.jpg',
+  'images/tzoumaz/tzoumaz-22.jpg',
+  // Kitchen
+  'images/tzoumaz/tzoumaz-20.jpg',
+  'images/tzoumaz/tzoumaz-21.jpg',
+  'images/tzoumaz/tzoumaz-15.jpg',
+  // Terrace
+  'images/tzoumaz/tzoumaz-23.jpg',
+  'images/tzoumaz/tzoumaz-24.jpg',
+  'images/tzoumaz/tzoumaz-25.jpg',
+  'images/tzoumaz/tzoumaz-26.jpg',
+  // Bedrooms
+  'images/tzoumaz/tzoumaz-04.jpg',
+  'images/tzoumaz/tzoumaz-13.jpg',
+  'images/tzoumaz/tzoumaz-14.jpg',
+  'images/tzoumaz/tzoumaz-07.jpg',
+  'images/tzoumaz/tzoumaz-10.jpg',
+  // Bathrooms
+  'images/tzoumaz/tzoumaz-11.jpg',
+  'images/tzoumaz/tzoumaz-12.jpg',
+  'images/tzoumaz/tzoumaz-01.jpg',
+  'images/tzoumaz/tzoumaz-02.jpg',
+  'images/tzoumaz/tzoumaz-03.jpg',
+  // Corridor last
+  'images/tzoumaz/tzoumaz-08.jpg',
+  'images/tzoumaz/tzoumaz-09.jpg',
+  'images/tzoumaz/tzoumaz-05.jpg',
+  'images/tzoumaz/tzoumaz-06.jpg',
+];
 let tzIdx = 0;
 
 function tzLoad(idx) {

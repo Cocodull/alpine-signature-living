@@ -541,8 +541,8 @@ document.querySelectorAll('.cat-tab').forEach(btn => {
 });
 
 // ── Baechtelenweg slider ──
-const NB_PHOTOS = Array.from({length: 41}, (_, i) =>
-  `images/baechtelenweg/baechtelenweg-${String(i + 1).padStart(2, '0')}.jpg`
+const NB_PHOTOS = Array.from({length: 11}, (_, i) =>
+  `images/baechtelenweg/baechtelenweg-${String(i + 1).padStart(2, '0')}.png`
 );
 let nbIdx = 0;
 

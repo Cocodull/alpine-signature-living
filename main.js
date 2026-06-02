@@ -586,10 +586,10 @@ if (nbSlider) {
 
 // ── La Tzoumaz slider ──
 const TZ_PHOTOS = [
-  // Living room — fireplace hero first
-  'images/tzoumaz/tzoumaz-18.jpg',
-  'images/tzoumaz/tzoumaz-17.jpg',
-  'images/tzoumaz/tzoumaz-19.jpg',
+  // Living room — fireplace hero first (all with fire)
+  'images/tzoumaz/tzoumaz-29.jpg',
+  'images/tzoumaz/tzoumaz-28.jpg',
+  'images/tzoumaz/tzoumaz-30.jpg',
   'images/tzoumaz/tzoumaz-27.jpg',
   'images/tzoumaz/tzoumaz-16.jpg',
   'images/tzoumaz/tzoumaz-22.jpg',

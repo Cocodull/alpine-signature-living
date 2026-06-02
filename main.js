@@ -603,7 +603,6 @@ const TZ_PHOTOS = [
   'images/tzoumaz/tzoumaz-25.jpg',
   'images/tzoumaz/tzoumaz-26.jpg',
   // Bedrooms
-  'images/tzoumaz/tzoumaz-04.jpg',
   'images/tzoumaz/tzoumaz-13.jpg',
   'images/tzoumaz/tzoumaz-14.jpg',
   'images/tzoumaz/tzoumaz-07.jpg',
@@ -617,7 +616,6 @@ const TZ_PHOTOS = [
   // Corridor last
   'images/tzoumaz/tzoumaz-08.jpg',
   'images/tzoumaz/tzoumaz-09.jpg',
-  'images/tzoumaz/tzoumaz-05.jpg',
   'images/tzoumaz/tzoumaz-06.jpg',
 ];
 let tzIdx = 0;

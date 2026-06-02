@@ -287,7 +287,7 @@ const PROJECTS = [
           fr: "Le bar était très imposant — il dominait la cuisine et rendait l'espace sombre encore plus petit. Sa suppression a ouvert le volume, créant de la place pour une grande table et une fluidité naturelle entre cuisine et séjour."
         },
         before: "images/ovronnaz/s07-before.jpg",
-        after:  ["images/ovronnaz/s07-after-1.jpg", "images/ovronnaz/s07-after-2.jpg"]
+        after:  "images/ovronnaz/s07-after-2.jpg"
       },
       {
         label: { en: "Living & Kitchen — The Result", fr: "Séjour & Cuisine — Le résultat" },

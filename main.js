@@ -403,7 +403,7 @@ function buildRenovationCards() {
           <span class="photo-tag apres-tag">${afterLabel}</span>
         </div>`).join('');
 
-      card.className = pair.portrait ? 'room-card portrait-card' : 'room-card';
+      card.className = 'room-card';
       card.innerHTML = `
         <div class="room-photos room-photos-${total}">
           <div class="room-photo-col">

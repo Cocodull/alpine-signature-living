@@ -559,6 +559,9 @@ const NB_PHOTOS = [
   // Balcony
   'images/baechtelenweg/baechtelenweg-10.png',
   'images/baechtelenweg/baechtelenweg-11.png',
+  // Tower exterior
+  'images/baechtelenweg/baechtelenweg-12.jpg',
+  'images/baechtelenweg/baechtelenweg-13.jpg',
 ];
 let nbIdx = 0;
 

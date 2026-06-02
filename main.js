@@ -568,11 +568,39 @@ if (nbSlider) {
   nbLoad(0);
 }
 
+// ── La Tzoumaz slider ──
+const TZ_PHOTOS = Array.from({length: 27}, (_, i) =>
+  `images/tzoumaz/tzoumaz-${String(i + 1).padStart(2, '0')}.jpg`
+);
+let tzIdx = 0;
+
+function tzLoad(idx) {
+  tzIdx = (idx + TZ_PHOTOS.length) % TZ_PHOTOS.length;
+  document.getElementById('nb-tz-img').src = TZ_PHOTOS[tzIdx];
+  document.getElementById('nb-tz-current').textContent = tzIdx + 1;
+}
+
+const tzSlider = document.getElementById('nb-tzoumaz');
+if (tzSlider) {
+  document.getElementById('nb-tz-total').textContent = TZ_PHOTOS.length;
+  document.getElementById('nb-tz-img').addEventListener('click', () => openLightbox(TZ_PHOTOS[tzIdx]));
+  document.getElementById('nb-tz-prev').addEventListener('click', () => tzLoad(tzIdx - 1));
+  document.getElementById('nb-tz-next').addEventListener('click', () => tzLoad(tzIdx + 1));
+
+  let tzTouchX = 0;
+  tzSlider.addEventListener('touchstart', e => { tzTouchX = e.touches[0].clientX; }, { passive: true });
+  tzSlider.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - tzTouchX;
+    if (Math.abs(dx) > 40) dx < 0 ? tzLoad(tzIdx + 1) : tzLoad(tzIdx - 1);
+  });
+  tzLoad(0);
+}
+
 document.addEventListener('keydown', e => {
   const catNb = document.getElementById('cat-newbuild');
   if (!catNb || catNb.style.display === 'none') return;
-  if (e.key === 'ArrowLeft')  nbLoad(nbIdx - 1);
-  if (e.key === 'ArrowRight') nbLoad(nbIdx + 1);
+  if (e.key === 'ArrowLeft')  { nbLoad(nbIdx - 1); tzLoad(tzIdx - 1); }
+  if (e.key === 'ArrowRight') { nbLoad(nbIdx + 1); tzLoad(tzIdx + 1); }
 });
 
 // ── Lightbox ──

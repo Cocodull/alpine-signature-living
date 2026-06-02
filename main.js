@@ -259,8 +259,8 @@ const PROJECTS = [
           fr: "Le sol est recouvert de carrelage anthracite texturisé, créant une harmonie dans la pièce et une sensation de luxe. La lumière blanche du lustre a été remplacée par des spots de lumière chaude, bien plus accueillants."
         },
         portrait: true,
-        before: "images/ovronnaz/s03-after.jpg",
-        after:  "images/ovronnaz/s03-before.jpg"
+        before: "images/ovronnaz/s03-before.jpg",
+        after:  "images/ovronnaz/s03-after.jpg"
       },
       {
         label: { en: "Bedroom — Cabinets", fr: "Chambre — Placards" },
@@ -370,67 +370,104 @@ function buildRenovationCards() {
   if (!container) return;
   container.innerHTML = '';
 
-  proj.pairs.forEach((pair, i) => {
-    const label = pair.label[currentLang] || pair.label.en;
-    const note  = (pair.note[currentLang] || pair.note.en || '').trim();
-    const num   = String(i + 1).padStart(2, '0');
-    const card  = document.createElement('div');
-    card.className = 'room-card';
+  const beforeLabel = currentLang === 'fr' ? 'Avant' : 'Before';
+  const afterLabel  = currentLang === 'fr' ? 'Après' : 'After';
 
-    const infoHTML = `
-      <div class="room-info">
-        <span class="room-num">${num}</span>
-        <div class="room-info-text">
-          <h3 class="room-name">${label}</h3>
-          ${note ? `<p class="room-note">${note}</p>` : ''}
-        </div>
-      </div>`;
+  container.innerHTML = `
+    <div class="reno-carousel-wrap">
+      <button class="reno-arrow reno-prev" aria-label="Previous">&#8592;</button>
+      <div class="reno-track"></div>
+      <button class="reno-arrow reno-next" aria-label="Next">&#8594;</button>
+    </div>
+    <div class="reno-nav">
+      <span class="reno-counter"><span class="reno-current">1</span> / ${proj.pairs.length}</span>
+      <div class="reno-dots"></div>
+    </div>
+    <div class="reno-info-panel"></div>`;
+
+  const track  = container.querySelector('.reno-track');
+  const dotsEl = container.querySelector('.reno-dots');
+  const infoEl = container.querySelector('.reno-info-panel');
+  const currEl = container.querySelector('.reno-current');
+  let current  = 0;
+
+  proj.pairs.forEach((pair, i) => {
+    const slide = document.createElement('div');
+    slide.className = 'reno-slide';
 
     if (pair.solo) {
-      card.innerHTML = `
-        <div class="room-solo">
-          <img src="${pair.solo}" alt="${label}" loading="lazy">
-        </div>
-        ${infoHTML}`;
-      card.querySelector('.room-solo img').addEventListener('click', e => openLightbox(e.target.src));
+      const label = pair.label[currentLang] || pair.label.en;
+      slide.innerHTML = `<div class="room-solo"><img src="${pair.solo}" alt="${label}" loading="lazy"></div>`;
+      slide.querySelector('img').addEventListener('click', e => openLightbox(e.target.src));
     } else {
-      const beforeLabel = currentLang === 'fr' ? 'Avant' : 'Before';
-      const afterLabel  = currentLang === 'fr' ? 'Après' : 'After';
-      const afters      = Array.isArray(pair.after) ? pair.after : [pair.after];
-      const heroAfter   = afters[0];
-      const extraAfters = afters.slice(1);
+      const afters     = Array.isArray(pair.after) ? pair.after : [pair.after];
+      const heroAfter  = afters[0];
+      const extras     = afters.slice(1);
+      const extrasHTML = extras.length ? `<div class="room-extra-afters">${extras.map(s =>
+        `<img src="${s}" alt="${afterLabel}" loading="lazy">`).join('')}</div>` : '';
 
-      const extrasHTML = extraAfters.length ? `
-        <div class="room-extra-afters">
-          ${extraAfters.map(src => `<img src="${src}" alt="${label} — ${afterLabel}" loading="lazy">`).join('')}
-        </div>` : '';
-
-      card.innerHTML = `
+      slide.innerHTML = `
         <div class="room-hero">
-          <img class="room-after-img" src="${heroAfter}" alt="${label} — ${afterLabel}" loading="lazy">
+          <img class="room-after-img" src="${heroAfter}" alt="${afterLabel}" loading="lazy">
           <div class="room-before-inset">
-            <img src="${pair.before}" alt="${label} — ${beforeLabel}" loading="lazy">
+            <img src="${pair.before}" alt="${beforeLabel}" loading="lazy">
             <span class="inset-label">${beforeLabel}</span>
           </div>
           <span class="room-after-label">${afterLabel}</span>
         </div>
-        ${extrasHTML}
-        ${infoHTML}`;
+        ${extrasHTML}`;
 
-      card.querySelector('.room-hero').addEventListener('click', e => {
+      slide.querySelector('.room-hero').addEventListener('click', e => {
         if (!e.target.closest('.room-before-inset')) openLightbox(heroAfter);
       });
-      card.querySelector('.room-before-inset').addEventListener('click', e => {
-        e.stopPropagation();
-        openLightbox(pair.before);
+      slide.querySelector('.room-before-inset').addEventListener('click', e => {
+        e.stopPropagation(); openLightbox(pair.before);
       });
-      card.querySelectorAll('.room-extra-afters img').forEach(img =>
-        img.addEventListener('click', () => openLightbox(img.src))
-      );
+      slide.querySelectorAll('.room-extra-afters img').forEach(img =>
+        img.addEventListener('click', () => openLightbox(img.src)));
     }
 
-    container.appendChild(card);
+    track.appendChild(slide);
+
+    const dot = document.createElement('button');
+    dot.className = 'reno-dot' + (i === 0 ? ' active' : '');
+    dot.addEventListener('click', () => goTo(i));
+    dotsEl.appendChild(dot);
   });
+
+  function goTo(idx) {
+    current = (idx + proj.pairs.length) % proj.pairs.length;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    currEl.textContent = current + 1;
+    dotsEl.querySelectorAll('.reno-dot').forEach((d, j) => d.classList.toggle('active', j === current));
+    infoEl.style.opacity = '0';
+    setTimeout(() => {
+      const pair  = proj.pairs[current];
+      const label = pair.label[currentLang] || pair.label.en;
+      const note  = (pair.note?.[currentLang] || pair.note?.en || '').trim();
+      infoEl.innerHTML = `
+        <div class="room-info">
+          <span class="room-num">${String(current + 1).padStart(2, '0')}</span>
+          <div class="room-info-text">
+            <h3 class="room-name">${label}</h3>
+            ${note ? `<p class="room-note">${note}</p>` : ''}
+          </div>
+        </div>`;
+      infoEl.style.opacity = '1';
+    }, 180);
+  }
+
+  container.querySelector('.reno-prev').addEventListener('click', () => goTo(current - 1));
+  container.querySelector('.reno-next').addEventListener('click', () => goTo(current + 1));
+
+  let touchX = 0;
+  track.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend',   e => {
+    const dx = e.changedTouches[0].clientX - touchX;
+    if (Math.abs(dx) > 50) dx < 0 ? goTo(current + 1) : goTo(current - 1);
+  });
+
+  goTo(0);
 }
 
 // ── Category tabs ──

@@ -541,9 +541,25 @@ document.querySelectorAll('.cat-tab').forEach(btn => {
 });
 
 // ── Baechtelenweg slider ──
-const NB_PHOTOS = Array.from({length: 11}, (_, i) =>
-  `images/baechtelenweg/baechtelenweg-${String(i + 1).padStart(2, '0')}.png`
-);
+const NB_PHOTOS = [
+  // Kitchen
+  'images/baechtelenweg/baechtelenweg-04.png',
+  'images/baechtelenweg/baechtelenweg-05.png',
+  'images/baechtelenweg/baechtelenweg-01.png',
+  // Living room
+  'images/baechtelenweg/baechtelenweg-02.png',
+  'images/baechtelenweg/baechtelenweg-03.png',
+  // Office
+  'images/baechtelenweg/baechtelenweg-07.png',
+  // Bedroom
+  'images/baechtelenweg/baechtelenweg-06.png',
+  // Bathroom
+  'images/baechtelenweg/baechtelenweg-08.png',
+  'images/baechtelenweg/baechtelenweg-09.png',
+  // Balcony
+  'images/baechtelenweg/baechtelenweg-10.png',
+  'images/baechtelenweg/baechtelenweg-11.png',
+];
 let nbIdx = 0;
 
 function nbLoad(idx) {

@@ -1,15 +1,15 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --cream: #f5f1eb;
-  --warm-white: #faf8f4;
-  --charcoal: #1c1c1c;
-  --slate: #3d3d3d;
-  --muted: #7a7268;
-  --gold: #a8896c;
-  --gold-light: #c9aa87;
+  --cream: #F4F1EC;
+  --warm-white: #FFFFFF;
+  --charcoal: #1E2A23;
+  --slate: #3a4a40;
+  --muted: #6F7D74;
+  --gold: #B89160;
+  --gold-light: #cfa97a;
   --gold-pale: #e8ddd0;
-  --rule: rgba(168,137,108,0.25);
+  --rule: rgba(184,145,96,0.25);
 }
 
 html { scroll-behavior: smooth; }
@@ -220,7 +220,7 @@ nav {
 
 .hero-title {
   font-family: 'Cormorant Garamond', serif;
-  font-weight: 300;
+  font-weight: 500;
   font-size: clamp(2.8rem, 4.5vw, 4.2rem);
   line-height: 1.12;
   color: var(--charcoal);
@@ -233,11 +233,21 @@ nav {
   color: var(--gold);
 }
 
+.hero-slogan {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--gold);
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.03em;
+}
+
 .hero-category {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1rem;
   font-style: italic;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.12em;
   color: var(--gold);
   margin-bottom: 1.8rem;
@@ -385,7 +395,7 @@ section { padding: 8rem 0; }
 
 .section-title {
   font-family: 'Cormorant Garamond', serif;
-  font-weight: 300;
+  font-weight: 500;
   font-size: clamp(2rem, 3.5vw, 3rem);
   line-height: 1.2;
   color: var(--charcoal);
@@ -410,7 +420,7 @@ section { padding: 8rem 0; }
 .about-quote {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(1.35rem, 2.2vw, 1.75rem);
-  font-weight: 300;
+  font-weight: 400;
   font-style: italic;
   line-height: 1.55;
   color: var(--slate);
@@ -480,7 +490,7 @@ section { padding: 8rem 0; }
 .stat-num {
   font-family: 'Cormorant Garamond', serif;
   font-size: 2.8rem;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--gold);
   line-height: 1;
   margin-bottom: 0.3rem;
@@ -584,7 +594,7 @@ section { padding: 8rem 0; }
 .step-num {
   font-family: 'Cormorant Garamond', serif;
   font-size: 4rem;
-  font-weight: 300;
+  font-weight: 400;
   color: rgba(168,137,108,0.2);
   line-height: 1;
   margin-bottom: 1rem;
@@ -644,7 +654,7 @@ section { padding: 8rem 0; }
 .lang-divider {
   font-family: 'Cormorant Garamond', serif;
   font-size: 2.5rem;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--gold);
 }
 
@@ -759,7 +769,7 @@ section { padding: 8rem 0; }
 .nb-num {
   font-family: 'Cormorant Garamond', serif;
   font-size: 5rem;
-  font-weight: 300;
+  font-weight: 400;
   color: rgba(168,137,108,0.15);
   line-height: 1;
   margin-bottom: 1.5rem;
@@ -779,7 +789,7 @@ section { padding: 8rem 0; }
 .nb-title {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(1.6rem, 2.5vw, 2.2rem);
-  font-weight: 300;
+  font-weight: 400;
   color: var(--cream);
   line-height: 1.15;
 }
@@ -936,7 +946,7 @@ section { padding: 8rem 0; }
 .reno-counter {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.05rem;
-  font-weight: 300;
+  font-weight: 400;
   color: rgba(245,241,235,0.3);
   letter-spacing: 0.1em;
   min-width: 4rem;
@@ -1084,7 +1094,7 @@ section { padding: 8rem 0; }
 .room-num {
   font-family: 'Cormorant Garamond', serif;
   font-size: 4.5rem;
-  font-weight: 300;
+  font-weight: 400;
   color: rgba(168,137,108,0.13);
   line-height: 1;
   flex-shrink: 0;
@@ -1461,6 +1471,24 @@ section { padding: 8rem 0; }
   background: var(--charcoal);
   color: var(--cream);
 }
+
+.form-contact-direct {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  color: var(--charcoal);
+}
+
+.form-contact-direct a {
+  color: var(--charcoal);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  transition: color 0.2s;
+}
+
+.form-contact-direct a:hover { color: var(--gold); }
 
 .cta-note {
   margin-top: 1.8rem;

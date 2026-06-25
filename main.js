@@ -249,7 +249,7 @@ const PROJECTS = [
           fr: "Avec tous ces changements — et les sols unifiés avec le même chêne naturel que dans la chambre — la pièce a trouvé toute son harmonie. Chaleureuse, réfléchie, avec un sentiment indéniable de confort et de luxe discret."
         },
         before: "images/ovronnaz/s08-before.jpg",
-        after:  "images/ovronnaz/s08-after.jpg"
+        after:  "images/ovronnaz/s08-after.png"
       },
       {
         label: { en: "Living Room", fr: "Séjour" },
@@ -258,7 +258,16 @@ const PROJECTS = [
           fr: "La cheminée et le banc en béton adjacent dominaient la pièce et prenaient beaucoup de place. Leur suppression — ainsi que les fausses poutres au plafond — a ouvert le volume et rendu la pièce bien plus grande."
         },
         before: "images/ovronnaz/s06-before.jpg",
-        after:  "images/ovronnaz/s06-after.jpg"
+        after:  "images/ovronnaz/s06-after.png"
+      },
+      {
+        label: { en: "Living Room — Furnished", fr: "Séjour — Meublé" },
+        note: {
+          en: "The apartment is now offered as a furnished alpine retreat — designed for both aesthetics and comfort, ready to welcome guests.",
+          fr: "L'appartement est maintenant proposé en location meublée — conçu à la fois pour l'esthétique et le confort, prêt à accueillir des hôtes."
+        },
+        before: "images/ovronnaz/salon s16 before.jpg",
+        after:  "images/ovronnaz/s16 after.jpg"
       },
       {
         label: { en: "Kitchen", fr: "Cuisine" },
@@ -276,7 +285,7 @@ const PROJECTS = [
           fr: "Les portes de placards en bois massif ont été sablées plutôt que remplacées — créant une surface texturée et tridimensionnelle — puis huilées avec une teinte N68 Châtaigne pour mettre en valeur le veinage naturel et s'harmoniser avec le vieux bois des murs."
         },
         before: "images/ovronnaz/s04-before.jpg",
-        after:  "images/ovronnaz/s04-after.jpg"
+        after:  "images/ovronnaz/s04-after.png"
       },
       {
         label: { en: "Bedroom — Walls & Floor", fr: "Chambre — Murs & Sol" },
@@ -285,7 +294,7 @@ const PROJECTS = [
           fr: "Le vieux bois au mur apporte une sophistication et une chaleur que le lambris original ne pouvait offrir. Le sol est recouvert de chêne naturel, dans la continuité d'une esthétique rustique et lumineuse."
         },
         before: "images/ovronnaz/s05-before.jpg",
-        after:  "images/ovronnaz/s05-after.jpg"
+        after:  "images/ovronnaz/s05-after.png"
       },
       {
         label: { en: "Corridor & Bathroom", fr: "Couloir & Salle de bain" },
@@ -293,7 +302,7 @@ const PROJECTS = [
           en: "The corridor held significant lost space, and the original bathroom was too small. By pushing back the walls, we created a generous bathroom volume with dedicated built-in storage and a separate column for the washer-dryer.",
           fr: "Le couloir recélait un espace perdu important, et la salle de bain d'origine était trop petite. En repoussant les murs, nous avons créé un volume généreux avec des rangements dédiés et une colonne séparée pour la machine à laver."
         },
-        before: "images/ovronnaz/s09-before.jpg",
+        before: "images/ovronnaz/s09 before.jpg",
         after:  "images/ovronnaz/s09-after.jpg"
       },
       {
@@ -303,7 +312,7 @@ const PROJECTS = [
           fr: "La salle de bain a été entièrement repensée. La fenêtre au-dessus du radiateur a été supprimée, dégageant l'espace et laissant place à une étagère en vieux bois sur mesure."
         },
         before: "images/ovronnaz/s10-before.jpg",
-        after:  "images/ovronnaz/s10-after.jpg"
+        after:  "images/ovronnaz/s10-after-2.jpg"
       },
       {
         label: { en: "Bathroom — Second View", fr: "Salle de bain — Deuxième vue" },
@@ -311,8 +320,8 @@ const PROJECTS = [
           en: "A second angle of the bathroom transformation, showing the full scope of the renovation.",
           fr: "Un deuxième angle de la transformation de la salle de bain, montrant l'ampleur complète de la rénovation."
         },
-        before: "images/ovronnaz/s11-before.jpg",
-        after:  "images/ovronnaz/s11-after.jpg"
+        before: "images/ovronnaz/s11 before.jpg",
+        after:  ["images/ovronnaz/s11-after.jpg", "images/ovronnaz/s11- after.jpg"]
       },
       {
         label: { en: "Shower", fr: "Douche" },
@@ -321,7 +330,7 @@ const PROJECTS = [
           fr: "La douche était étroite et sombre. En remplaçant les murs pleins et le bac par du verre, nous avons gagné espace et lumière — pour une douche plus grande et une salle de bain qui respire enfin."
         },
         before: "images/ovronnaz/s12-before.jpg",
-        after:  "images/ovronnaz/s12-after.jpg"
+        after:  "images/ovronnaz/s12after.jpg"
       },
       {
         label: { en: "Entrance", fr: "Entrée" },
@@ -338,8 +347,8 @@ const PROJECTS = [
           en: "The floor was laid with textured anthracite black tiles, creating coherence and a sense of quiet luxury. The cold white chandelier was replaced by warm-light spotlights — more welcoming, more considered.",
           fr: "Le sol est recouvert de carrelage anthracite texturisé, créant une harmonie dans la pièce et une sensation de luxe. La lumière blanche du lustre a été remplacée par des spots de lumière chaude, bien plus accueillants."
         },
-        before: "images/ovronnaz/s03-after.jpg",
-        after:  "images/ovronnaz/s03-before.jpg"
+        before: "images/ovronnaz/s03-bbefore.jpg",
+        after:  "images/ovronnaz/s03-after.jpg"
       },
       {
         label: { en: "Floor Plan", fr: "Plan d'appartement" },
@@ -347,7 +356,7 @@ const PROJECTS = [
           en: "The renovation scope at a glance — walls removed, the bathroom expanded into the corridor, a new Italian shower added, and every surface reimagined. Total interior surface: 54.8 m².",
           fr: "Le périmètre de la rénovation en un coup d'œil — murs abattus, salle de bain élargie sur le couloir, douche italienne créée, chaque surface repensée. Surface intérieure totale : 54,8 m²."
         },
-        solo: "images/ovronnaz/plan.jpg"
+        solo: "images/ovronnaz/lst page.jpg"
       }
     ]
   }

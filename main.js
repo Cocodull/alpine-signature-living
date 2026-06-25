@@ -114,7 +114,7 @@ const T = {
     'form.message':  'Your Enquiry',
     'form.submit':   'Submit Enquiry',
     'form.call':     'Schedule a Call',
-    'contact.note':  'Valais, Switzerland &nbsp;·&nbsp; Serving international owners worldwide',
+    'contact.note':  'Impasse de la Chapelle 37, 1918 La Tzoumaz &nbsp;·&nbsp; Switzerland',
     'footer.copy':   '© 2026 Alpine Signature Living. All rights reserved.',
   },
   fr: {
@@ -198,7 +198,7 @@ const T = {
     'form.message':  'Votre message',
     'form.submit':   'Envoyer',
     'form.call':     'Planifier un appel',
-    'contact.note':  'Valais, Suisse &nbsp;·&nbsp; Au service de propriétaires internationaux dans le monde entier',
+    'contact.note':  'Impasse de la Chapelle 37, 1918 La Tzoumaz &nbsp;·&nbsp; Suisse',
     'footer.copy':   '© 2026 Alpine Signature Living. Tous droits réservés.',
   }
 };

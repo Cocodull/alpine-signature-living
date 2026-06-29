@@ -213,7 +213,7 @@ function setLang(lang) {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const val = T[lang][el.dataset.i18n];
     if (val === undefined) return;
-    if (/<[a-z]/i.test(val)) el.innerHTML = val;
+    if (/<[a-z]|&[a-z#]/i.test(val)) el.innerHTML = val;
     else el.textContent = val;
   });
 

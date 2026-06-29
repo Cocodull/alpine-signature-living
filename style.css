@@ -39,16 +39,41 @@ nav {
 }
 
 .nav-logo {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 400;
-  font-size: 1.15rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--charcoal);
+  display: flex;
+  align-items: center;
+  gap: 0;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
-.nav-logo span { color: var(--gold); }
+.nav-logo-mark {
+  flex: none;
+  display: block;
+}
+
+.nav-logo-divider {
+  display: block;
+  width: 1px;
+  height: 28px;
+  background: rgba(184,145,96,0.35);
+  margin: 0 14px;
+  flex: none;
+}
+
+.nav-logo-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 1.05rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--charcoal);
+  font-style: normal;
+}
+
+.nav-logo-text em {
+  font-style: normal;
+  color: var(--gold);
+}
 
 .nav-links {
   display: flex;
@@ -1513,6 +1538,9 @@ footer {
 }
 
 .footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-family: 'Cormorant Garamond', serif;
   font-size: 1rem;
   font-weight: 400;

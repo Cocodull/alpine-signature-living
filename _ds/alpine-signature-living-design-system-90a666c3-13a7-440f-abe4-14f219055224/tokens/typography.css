@@ -1,0 +1,49 @@
+/* Alpine Signature Living — Typography tokens
+   Cormorant Garamond — display / headlines / slogan (italic)
+   Jost — labels (uppercase, wide tracking), body, UI
+*/
+:root {
+  /* ---- Families ---- */
+  --font-display: 'Cormorant Garamond', 'Times New Roman', Georgia, serif;
+  --font-sans: 'Jost', 'Helvetica Neue', Arial, sans-serif;
+
+  /* ---- Weights ---- */
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+
+  /* ---- Display scale (Cormorant Garamond) ---- */
+  --display-xxl: 88px;   /* hero */
+  --display-xl: 64px;
+  --display-lg: 48px;
+  --display-md: 36px;
+  --display-sm: 28px;
+
+  /* ---- Body / UI scale (Jost) ---- */
+  --text-lg: 20px;
+  --text-md: 17px;       /* default body */
+  --text-sm: 15px;
+  --text-xs: 13px;
+
+  /* ---- Label (Jost uppercase) ---- */
+  --label-md: 13px;
+  --label-sm: 11px;
+
+  /* ---- Line heights ---- */
+  --leading-display: 1.05;
+  --leading-snug: 1.25;
+  --leading-body: 1.7;
+  --leading-loose: 1.9;
+
+  /* ---- Letter-spacing ---- */
+  --tracking-wordmark: 0.16em;   /* logo wordmark */
+  --tracking-label: 0.3em;       /* descriptors / labels */
+  --tracking-label-tight: 0.22em;
+  --tracking-body: 0.005em;
+
+  /* ---- Semantic roles ---- */
+  --text-heading-family: var(--font-display);
+  --text-body-family: var(--font-sans);
+  --text-label-family: var(--font-sans);
+}

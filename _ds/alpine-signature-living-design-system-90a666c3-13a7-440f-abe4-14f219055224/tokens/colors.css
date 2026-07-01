@@ -1,0 +1,51 @@
+/* Alpine Signature Living — Colour tokens
+   Usage ratio: ~70% Stone/Paper · ~22% Alpine Green · ~8% Signature Gold.
+   Gold is a jewel accent — never large fills.
+*/
+:root {
+  /* ---- Base palette ---- */
+  --alpine-green: #1E2A23;   /* primary / ink */
+  --signature-gold: #B89160; /* accent — rings, rules, small marks only */
+  --slate-sage: #6F7D74;     /* secondary text, descriptors, captions */
+  --stone: #F4F1EC;          /* warm off-white background */
+  --paper: #FFFFFF;          /* cards, documents */
+
+  /* ---- Tonal steps (derived, for hover/borders/dividers) ---- */
+  --alpine-green-700: #16201A;
+  --alpine-green-600: #1E2A23;
+  --alpine-green-500: #2C3B32;
+  --alpine-green-400: #455349;
+  --gold-600: #A47E4F;
+  --gold-500: #B89160;
+  --gold-300: #D3B488;
+  --gold-100: #EBDDC6;
+  --stone-200: #E7E2D8;      /* hairline borders on stone */
+  --stone-300: #D8D1C3;
+  --sage-300: #9AA59D;
+
+  /* ---- Accent variants (pick one per project, stay consistent) ---- */
+  --accent-gold: #B89160;
+  --accent-copper: #B07A52;
+  --accent-sage: #6F8A6E;
+  --accent-slate: #5F7384;
+
+  /* ---- Semantic aliases ---- */
+  --bg-page: var(--stone);
+  --surface-card: var(--paper);
+  --surface-inverse: var(--alpine-green);
+
+  --text-heading: var(--alpine-green);
+  --text-body: var(--alpine-green-500);
+  --text-muted: var(--slate-sage);
+  --text-on-dark: var(--stone);
+  --text-on-dark-muted: #A8B2AB;
+
+  --accent: var(--signature-gold);
+  --rule: var(--signature-gold);
+
+  --border-hairline: var(--stone-200);
+  --border-strong: var(--stone-300);
+  --divider-on-dark: rgba(184, 145, 96, 0.35);
+
+  --focus-ring: rgba(184, 145, 96, 0.45);
+}

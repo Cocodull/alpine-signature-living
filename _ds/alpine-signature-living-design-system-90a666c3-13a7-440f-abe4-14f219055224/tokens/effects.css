@@ -1,0 +1,31 @@
+/* Alpine Signature Living — Radii, borders, shadows, motion
+   Restraint: square-ish corners, hairline borders, whisper-soft shadows.
+   No heavy drop shadows, no gradients on the mark.
+*/
+:root {
+  /* ---- Corner radii (minimal — the brand reads as printed/engraved) ---- */
+  --radius-none: 0;
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-pill: 999px;
+
+  /* ---- Borders ---- */
+  --border-hairline-width: 1px;
+  --rule-width: 1px;        /* gold rules under headings */
+  --rule-length: 48px;
+
+  /* ---- Shadows — soft, warm, low ---- */
+  --shadow-none: none;
+  --shadow-sm: 0 1px 2px rgba(30, 42, 35, 0.04);
+  --shadow-card: 0 8px 24px rgba(30, 42, 35, 0.06);
+  --shadow-raised: 0 18px 48px rgba(30, 42, 35, 0.10);
+  --shadow-focus: 0 0 0 3px var(--focus-ring);
+
+  /* ---- Motion — measured, no bounce ---- */
+  --ease-standard: cubic-bezier(0.22, 0.61, 0.36, 1); /* @kind other */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1); /* @kind other */
+  --duration-fast: 160ms; /* @kind other */
+  --duration-base: 260ms; /* @kind other */
+  --duration-slow: 480ms; /* @kind other */
+}

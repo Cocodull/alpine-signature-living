@@ -1,0 +1,7 @@
+/* Alpine Signature Living — Webfonts
+   Both typefaces are free Google Fonts. Consumers online pick these up via the
+   @font-face rules delivered by Google's CSS2 endpoint below.
+   Cormorant Garamond — display / wordmark / headlines
+   Jost — supporting / descriptors / body / UI
+*/
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap');

@@ -158,44 +158,6 @@
     </div>
   </div>
 
-  <!-- ============ ABOUT ============ -->
-  <section id="about" style="scroll-margin-top: 76px; padding: var(--sec-pad, 104px) 48px;">
-    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 80px; align-items: center;">
-      <div>
-        <x-import component-from-global-scope="AlpineSignatureLivingDesignSystem_90a666.SectionLabel" hint-size="auto,20px">{{ t.aboutEyebrow }}</x-import>
-        <h2 style="font-family: var(--font-display); font-weight: 500; font-size: clamp(32px, 4.2vw, 50px); line-height: 1.1; letter-spacing: 0.005em; color: var(--alpine-green); margin: 22px 0 0;">{{ t.aboutTitlePre }}<span style="font-style: italic;">{{ t.aboutTitleEm }}</span></h2>
-        <p style="font-family: var(--font-display); font-weight: 500; font-style: italic; font-size: 23px; line-height: 1.45; color: var(--alpine-green); border-left: 2px solid var(--signature-gold); padding-left: 24px; margin: 32px 0 0; max-width: 560px;">{{ t.aboutQuote }}</p>
-        <p style="font-family: var(--font-sans); font-weight: 300; font-size: 17px; line-height: 1.85; color: var(--alpine-green-500); max-width: 560px; margin: 30px 0 0;">{{ t.aboutBody1 }}</p>
-        <p style="font-family: var(--font-sans); font-weight: 300; font-size: 17px; line-height: 1.85; color: var(--alpine-green-500); max-width: 560px; margin: 18px 0 0;">{{ t.aboutBody2 }}</p>
-        <div style="display: flex; align-items: baseline; gap: 16px; margin: 32px 0 0;">
-          <span style="font-family: var(--font-display); font-weight: 500; font-style: italic; font-size: 28px; color: var(--alpine-green);">Corinne Dulles</span>
-          <span style="font-family: var(--font-sans); font-weight: 300; font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--slate-sage);">{{ t.founderRole }}</span>
-        </div>
-      </div>
-      <div style="display: flex; justify-content: center; align-items: center;">
-        <div style="position: relative; width: min(100%, 430px); aspect-ratio: 1 / 1; border-radius: 50%; box-shadow: var(--shadow-raised);">
-          <img src="images/corinne-portrait-framed.png" alt="Portrait of Corinne Dulles" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
-          <div style="position: absolute; inset: 0; border-radius: 50%; box-shadow: inset 0 0 0 1px rgba(30,42,35,0.10); pointer-events: none;"></div>
-          <div style="position: absolute; inset: -14px; border: 1px solid var(--signature-gold); border-radius: 50%; opacity: 0.45; pointer-events: none;"></div>
-        </div>
-      </div>
-    </div>
-    <div style="max-width: 1200px; margin: 72px auto 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--border-hairline); border-bottom: 1px solid var(--border-hairline);">
-      <div style="padding: 32px 28px 32px 0; border-right: 1px solid var(--border-hairline);">
-        <div style="font-family: var(--font-display); font-weight: 500; font-size: 38px; line-height: 1; color: var(--alpine-green);">{{ t.statBig1 }}</div>
-        <div style="font-family: var(--font-sans); font-weight: 300; font-size: 14px; line-height: 1.55; color: var(--slate-sage); margin-top: 12px;">{{ t.statLabel1 }}</div>
-      </div>
-      <div style="padding: 32px 28px; border-right: 1px solid var(--border-hairline);">
-        <div style="font-family: var(--font-display); font-weight: 500; font-size: 38px; line-height: 1; color: var(--alpine-green);">{{ t.statBig2 }}</div>
-        <div style="font-family: var(--font-sans); font-weight: 300; font-size: 14px; line-height: 1.55; color: var(--slate-sage); margin-top: 12px;">{{ t.statLabel2 }}</div>
-      </div>
-      <div style="padding: 32px 28px; border-right: 1px solid var(--border-hairline);">
-        <div style="font-family: var(--font-display); font-weight: 500; font-size: 38px; line-height: 1; color: var(--alpine-green);">{{ t.statBig3 }}</div>
-        <div style="font-family: var(--font-sans); font-weight: 300; font-size: 14px; line-height: 1.55; color: var(--slate-sage); margin-top: 12px;">{{ t.statLabel3 }}</div>
-      </div>
-    </div>
-  </section>
-
   <!-- ============ SERVICES ============ -->
   <section id="services" style="scroll-margin-top: 76px; padding: var(--sec-pad, 104px) 48px; background: var(--paper); border-top: 1px solid var(--border-hairline); border-bottom: 1px solid var(--border-hairline);">
     <div style="max-width: 1200px; margin: 0 auto;">
@@ -273,10 +235,27 @@
           <span style="font-family: var(--font-display); font-weight: 500; font-style: italic; font-size: clamp(21px, 2.5vw, 28px); line-height: 1.2; color: var(--gold-300);">{{ t.filmLine }}</span>
           <span style="width: 40px; height: 1px; background: var(--signature-gold); opacity: 0.7;"></span>
         </div>
-        <div style="position: relative; overflow: hidden; border-radius: 4px; border: 1px solid rgba(184,145,96,0.35); box-shadow: var(--shadow-raised); background: #000;">
-          <video src="videos/als-linkedin-v8.mp4" controls playsinline preload="metadata" style="display: block; width: 100%; height: auto; aspect-ratio: 2000 / 1124;"></video>
+        <div style="position: relative; width: 100%; aspect-ratio: 2000 / 1124; overflow: hidden; border-radius: 4px; border: 1px solid rgba(184,145,96,0.35); box-shadow: var(--shadow-raised); background: #000;">
+          <video ref="{{ filmVideoRef }}" src="videos/als-brochure-final.mp4" muted loop playsinline preload="auto" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;"></video>
         </div>
         <p style="font-family: var(--font-sans); font-weight: 300; font-size: 14px; letter-spacing: 0.02em; line-height: 1.7; color: var(--text-on-dark-muted); max-width: 560px; margin: 20px auto 0;">{{ t.filmCaption }}</p>
+        <div style="max-width: 520px; margin: 26px auto 0;">
+          <sc-if value="{{ filmLocked }}" hint-placeholder-val="{{ true }}">
+            <form onsubmit="{{ onFilmSubmit }}" style="display: flex; flex-direction: column; gap: 14px;">
+              <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+                <input type="email" name="filmEmail" required placeholder="{{ t.filmEmailPh }}" style="flex: 1 1 240px; min-width: 0; background: rgba(244,241,236,0.06); border: 1px solid rgba(184,145,96,0.4); border-radius: 2px; padding: 14px 16px; font-family: var(--font-sans); font-weight: 300; font-size: 15px; color: var(--stone); outline: none;">
+                <button type="submit" style="flex: 0 0 auto; background: var(--stone); color: var(--alpine-green); border: none; border-radius: 2px; padding: 14px 28px; font-family: var(--font-sans); font-weight: 500; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; cursor: pointer;">{{ t.filmCta }}</button>
+              </div>
+              <p style="font-family: var(--font-sans); font-weight: 300; font-size: 12px; letter-spacing: 0.02em; line-height: 1.6; color: var(--text-on-dark-muted); text-align: center; margin: 0;">{{ t.filmGateNote }}</p>
+            </form>
+          </sc-if>
+          <sc-if value="{{ filmUnlocked }}" hint-placeholder-val="{{ false }}">
+            <div style="text-align: center;">
+              <a href="videos/als-brochure-final.mp4" download="Alpine-Signature-Living-Brochure.mp4" onclick="{{ onDownloadClick }}" style="display: inline-flex; align-items: center; gap: 10px; background: var(--stone); color: var(--alpine-green); text-decoration: none; border-radius: 2px; padding: 14px 30px; font-family: var(--font-sans); font-weight: 500; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase;">{{ t.filmDownloadCta }}</a>
+              <p style="font-family: var(--font-sans); font-weight: 300; font-size: 13px; line-height: 1.6; color: var(--text-on-dark-muted); margin: 16px 0 0;">{{ t.filmThanks }}</p>
+            </div>
+          </sc-if>
+        </div>
       </div>
 
       <!-- Category tabs -->
@@ -374,6 +353,44 @@
     </div>
   </section>
 
+  <!-- ============ ABOUT ============ -->
+  <section id="about" style="scroll-margin-top: 76px; padding: var(--sec-pad, 104px) 48px;">
+    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 80px; align-items: center;">
+      <div>
+        <x-import component-from-global-scope="AlpineSignatureLivingDesignSystem_90a666.SectionLabel" hint-size="auto,20px">{{ t.aboutEyebrow }}</x-import>
+        <h2 style="font-family: var(--font-display); font-weight: 500; font-size: clamp(32px, 4.2vw, 50px); line-height: 1.1; letter-spacing: 0.005em; color: var(--alpine-green); margin: 22px 0 0;">{{ t.aboutTitlePre }}<span style="font-style: italic;">{{ t.aboutTitleEm }}</span></h2>
+        <p style="font-family: var(--font-display); font-weight: 500; font-style: italic; font-size: 23px; line-height: 1.45; color: var(--alpine-green); border-left: 2px solid var(--signature-gold); padding-left: 24px; margin: 32px 0 0; max-width: 560px;">{{ t.aboutQuote }}</p>
+        <p style="font-family: var(--font-sans); font-weight: 300; font-size: 17px; line-height: 1.85; color: var(--alpine-green-500); max-width: 560px; margin: 30px 0 0;">{{ t.aboutBody1 }}</p>
+        <p style="font-family: var(--font-sans); font-weight: 300; font-size: 17px; line-height: 1.85; color: var(--alpine-green-500); max-width: 560px; margin: 18px 0 0;">{{ t.aboutBody2 }}</p>
+        <div style="display: flex; align-items: baseline; gap: 16px; margin: 32px 0 0;">
+          <span style="font-family: var(--font-display); font-weight: 500; font-style: italic; font-size: 28px; color: var(--alpine-green);">Corinne Dulles</span>
+          <span style="font-family: var(--font-sans); font-weight: 300; font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--slate-sage);">{{ t.founderRole }}</span>
+        </div>
+      </div>
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <div style="position: relative; width: min(100%, 430px); aspect-ratio: 1 / 1; border-radius: 50%; box-shadow: var(--shadow-raised);">
+          <img src="images/corinne-portrait-framed.png" alt="Portrait of Corinne Dulles" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+          <div style="position: absolute; inset: 0; border-radius: 50%; box-shadow: inset 0 0 0 1px rgba(30,42,35,0.10); pointer-events: none;"></div>
+          <div style="position: absolute; inset: -14px; border: 1px solid var(--signature-gold); border-radius: 50%; opacity: 0.45; pointer-events: none;"></div>
+        </div>
+      </div>
+    </div>
+    <div style="max-width: 1200px; margin: 72px auto 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--border-hairline); border-bottom: 1px solid var(--border-hairline);">
+      <div style="padding: 32px 28px 32px 0; border-right: 1px solid var(--border-hairline);">
+        <div style="font-family: var(--font-display); font-weight: 500; font-size: 38px; line-height: 1; color: var(--alpine-green);">{{ t.statBig1 }}</div>
+        <div style="font-family: var(--font-sans); font-weight: 300; font-size: 14px; line-height: 1.55; color: var(--slate-sage); margin-top: 12px;">{{ t.statLabel1 }}</div>
+      </div>
+      <div style="padding: 32px 28px; border-right: 1px solid var(--border-hairline);">
+        <div style="font-family: var(--font-display); font-weight: 500; font-size: 38px; line-height: 1; color: var(--alpine-green);">{{ t.statBig2 }}</div>
+        <div style="font-family: var(--font-sans); font-weight: 300; font-size: 14px; line-height: 1.55; color: var(--slate-sage); margin-top: 12px;">{{ t.statLabel2 }}</div>
+      </div>
+      <div style="padding: 32px 28px; border-right: 1px solid var(--border-hairline);">
+        <div style="font-family: var(--font-display); font-weight: 500; font-size: 38px; line-height: 1; color: var(--alpine-green);">{{ t.statBig3 }}</div>
+        <div style="font-family: var(--font-sans); font-weight: 300; font-size: 14px; line-height: 1.55; color: var(--slate-sage); margin-top: 12px;">{{ t.statLabel3 }}</div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ CONTACT ============ -->
   <section id="contact" style="scroll-margin-top: 76px; padding: var(--sec-pad, 104px) 48px; background: var(--stone);">
     <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;">
@@ -448,7 +465,7 @@
   &quot;density&quot;: { &quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;Editorial&quot;, &quot;Compact&quot;], &quot;default&quot;: &quot;Editorial&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Theme&quot; }
 }">
 class Component extends DCLogic {
-  state = { lang: "en" };
+  state = { lang: "en", filmUnlocked: false };
 
   T = {
     en: {
@@ -464,7 +481,7 @@ class Component extends DCLogic {
       svc5Title: "Financing coordination", svc5Desc: "Structuring and coordinating the financing of your property project — liaising with Swiss banks and financial institutions on your behalf, in the language and format they require.",
       svc6Title: "Interior design & furnishing", svc6Desc: "Specification of interior finishes, material selections, and furnishing — from tile and flooring choices to full kitchen design and final staging. An interior that reflects the precision of your vision.",
       langNative: "Français — native fluency", langSub: "Seamlessly bilingual, without compromise", langFluent: "English — full professional fluency",
-      galEyebrow: "Case studies", galTitlePre: "", galTitleEm: "Selected", galTitlePost: " works", galTabReno: "Renovation", galTabNew: "New Built sur Plans", filmLine: "It all comes down to data.", filmCaption: "A data-driven approach to residential property in Valais — from concept to completion.", galNewSub: "Two residential projects developed from plan — each shaped in close collaboration with the project team and architect to reflect the client's precise vision.",
+      galEyebrow: "Case studies", galTitlePre: "", galTitleEm: "Selected", galTitlePost: " works", galTabReno: "Renovation", galTabNew: "New Built sur Plans", filmLine: "It all comes down to data.", filmPreviewTag: "Preview", filmEmailPh: "Your email address", filmCta: "Get the brochure", filmGateNote: "Enter your email and the brochure will be sent to you.", filmDownloadCta: "Download the brochure", filmThanks: "Thank you. Your download is starting — a copy will also be sent to your inbox shortly.", filmCaption: "A data-driven approach to residential property in Valais — from concept to completion.", galNewSub: "Two residential projects developed from plan — each shaped in close collaboration with the project team and architect to reflect the client's precise vision.",
       nb1Type: "Chalet · La Tzoumaz, Verbier", nb1TitleA: "La Tzoumaz", nb1TitleEm: "Private Chalet", nb1Desc: "A private chalet at the foot of the Verbier ski domain, owned by Corinne and developed in close collaboration with architect Thomas De Witt of Home Partners. Corinne contributed throughout the finishing and decoration, uniting two distinct creative visions into a single, cohesive alpine residence — refined at every stage until full satisfaction.", nb1Credit: "Owner — finishing & decoration · in collaboration with architect Thomas De Witt, Home Partners",
       nb2Type: "Penthouse · Canton of Bern", nb2TitleA: "Baechtelenweg", nb2TitleEm: "Vegetal Tower", nb2Desc: "A penthouse residence within the Garden Tower at Baechtelenweg, Wabern — one of Switzerland's most celebrated contemporary buildings. As owner, Corinne shaped the complete interior finishing and decoration: the selection of tiles, flooring materials, and the full design of the kitchen. The building architecture is the work of the project's architects.", nb2Credit: "Owner — interior finishing & decoration · tiles, flooring, kitchen design",
       processEyebrow: "How it works", processTitlePre: "A measured approach ", processTitleEm: "from first contact to completion.",
@@ -491,7 +508,7 @@ class Component extends DCLogic {
       svc5Title: "Coordination du financement", svc5Desc: "Structuration et coordination du financement de votre projet immobilier — liaison avec les banques suisses et les institutions financières en votre nom, dans la langue et le format qu'elles requièrent.",
       svc6Title: "Design intérieur & ameublement", svc6Desc: "Spécification des finitions intérieures, sélection des matériaux et ameublement — des choix de carrelage et de revêtements de sol à la conception complète de la cuisine et à la mise en scène finale. Un intérieur qui reflète la précision de votre vision.",
       langNative: "Français — langue maternelle", langSub: "Parfaitement bilingue, sans compromis", langFluent: "Anglais — courant professionnel",
-      galEyebrow: "Réalisations", galTitlePre: "Projets ", galTitleEm: "sélectionnés", galTitlePost: "", galTabReno: "Rénovation", galTabNew: "Construction sur Plans", filmLine: "Tout est une question de données.", filmCaption: "Une approche fondée sur les données pour l'immobilier résidentiel en Valais — du concept à l'achèvement.", galNewSub: "Deux projets résidentiels développés sur plans — chacun façonné en étroite collaboration avec l'équipe du projet et l'architecte pour refléter la vision précise du client.",
+      galEyebrow: "Réalisations", galTitlePre: "Projets ", galTitleEm: "sélectionnés", galTitlePost: "", galTabReno: "Rénovation", galTabNew: "Construction sur Plans", filmPreviewTag: "Aperçu", filmEmailPh: "Votre adresse e-mail", filmCta: "Recevoir la brochure", filmGateNote: "Indiquez votre e-mail et la brochure vous sera envoyée.", filmDownloadCta: "Télécharger la brochure", filmThanks: "Merci. Votre téléchargement démarre — une copie vous sera également envoyée par e-mail.", filmLine: "Tout est une question de données.", filmCaption: "Une approche fondée sur les données pour l'immobilier résidentiel en Valais — du concept à l'achèvement.", galNewSub: "Deux projets résidentiels développés sur plans — chacun façonné en étroite collaboration avec l'équipe du projet et l'architecte pour refléter la vision précise du client.",
       nb1Type: "Chalet · La Tzoumaz, Verbier", nb1TitleA: "La Tzoumaz", nb1TitleEm: "Chalet privé", nb1Desc: "Un chalet privé au pied du domaine skiable de Verbier, propriété de Corinne et développé en étroite collaboration avec l'architecte Thomas De Witt de Home Partners. Corinne a contribué tout au long des finitions et de la décoration, réunissant deux visions créatives distinctes en une résidence alpine cohérente et raffinée — affinée à chaque étape jusqu'à pleine satisfaction.", nb1Credit: "Propriétaire — finitions & décoration · en collaboration avec l'architecte Thomas De Witt, Home Partners",
       nb2Type: "Attique · Canton de Berne", nb2TitleA: "Baechtelenweg", nb2TitleEm: "Vegetal Tower", nb2Desc: "Une résidence en attique au sein du Garden Tower à Baechtelenweg, Wabern — l'un des immeubles contemporains les plus célébrés de Suisse. En tant que propriétaire, Corinne a façonné l'intégralité des finitions et de la décoration intérieures : choix des carrelages, revêtements de sol et conception complète de la cuisine. L'architecture du bâtiment est l'œuvre des architectes du projet.", nb2Credit: "Propriétaire — finitions & décoration intérieures · carrelages, sols, cuisine",
       processEyebrow: "Notre démarche", processTitlePre: "Une approche structurée ", processTitleEm: "du premier contact à la livraison.",
@@ -544,6 +561,30 @@ class Component extends DCLogic {
     }
   }
 
+  downloadPresentation() {
+    const url = 'videos/als-brochure-final.mp4';
+    const name = 'Alpine-Signature-Living-Brochure.mp4';
+    const direct = () => {
+      const a = document.createElement('a');
+      a.href = url; a.download = name; a.target = '_blank'; a.rel = 'noopener';
+      document.body.appendChild(a); a.click(); a.remove();
+    };
+    // Prefer an in-memory blob so the download works even where the direct
+    // link would be intercepted; fall back to a plain anchor on any failure.
+    try {
+      fetch(url, { credentials: 'same-origin' })
+        .then((r) => { if (!r.ok) throw new Error('bad status'); return r.blob(); })
+        .then((blob) => {
+          const obj = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = obj; a.download = name;
+          document.body.appendChild(a); a.click(); a.remove();
+          setTimeout(() => URL.revokeObjectURL(obj), 8000);
+        })
+        .catch(direct);
+    } catch (err) { direct(); }
+  }
+
   renderVals() {
     const lang = this.state.lang;
     const t = this.T[lang] || this.T.en;
@@ -551,6 +592,40 @@ class Component extends DCLogic {
     return {
       t,
       marqueeText,
+      filmVideoRef: (el) => {
+        if (el) {
+          el.muted = true;
+          el.defaultMuted = true;
+          el.volume = 0;
+          el.loop = true;
+          if (!el._silentGuard) {
+            el._silentGuard = true;
+            const enforce = () => { el.muted = true; el.volume = 0; };
+            el.addEventListener('play', enforce);
+            el.addEventListener('volumechange', enforce);
+            el.addEventListener('loadedmetadata', enforce);
+          }
+          const p = el.play();
+          if (p && p.catch) p.catch(() => {});
+        }
+      },
+      filmLocked: !this.state.filmUnlocked,
+      filmUnlocked: this.state.filmUnlocked,
+      onFilmSubmit: (e) => {
+        e.preventDefault();
+        const f = e.currentTarget;
+        const input = f.querySelector('input[type="email"]');
+        const email = input ? (input.value || '').trim() : '';
+        if (!email) return;
+        try {
+          const leads = JSON.parse(localStorage.getItem('asl_film_leads') || '[]');
+          leads.push({ email: email, at: new Date().toISOString() });
+          localStorage.setItem('asl_film_leads', JSON.stringify(leads));
+        } catch (err) {}
+        this.setState({ filmUnlocked: true });
+        setTimeout(() => { this.downloadPresentation(); }, 200);
+      },
+      onDownloadClick: (e) => { if (e) e.preventDefault(); this.downloadPresentation(); },
       enStyle: 'cursor: pointer; color: ' + (lang === 'en' ? 'var(--alpine-green)' : 'var(--slate-sage)') + ';',
       frStyle: 'cursor: pointer; color: ' + (lang === 'fr' ? 'var(--alpine-green)' : 'var(--slate-sage)') + ';',
       setEn: () => { if (this.state.lang !== 'en') this.setState({ lang: 'en' }); },

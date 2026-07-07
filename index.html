@@ -114,6 +114,38 @@
       #projects .room-info{ flex-direction:column; gap:0.5rem; }
       #projects .room-num{ font-size:2.5rem; }
     }
+
+    /* ===== Mobile navigation ===== */
+    .nav-toggle-checkbox{ display:none; }
+    .nav-toggle-label{ display:none; flex-direction:column; justify-content:center; gap:5px; width:26px; height:20px; cursor:pointer; }
+    .nav-toggle-label span{ display:block; height:2px; background:var(--alpine-green); border-radius:1px; }
+
+    /* ===== Mobile layout ===== */
+    @media (max-width:900px){
+      .nav-toggle-label{ display:flex; }
+      header.asl-header{ padding:14px 20px !important; }
+      nav.asl-nav{
+        position:absolute; top:100%; left:0; right:0; width:100%;
+        flex-direction:column; align-items:flex-start; gap:0;
+        background:var(--stone); border-bottom:1px solid var(--border-hairline);
+        max-height:0; overflow:hidden; padding:0 20px;
+        transition:max-height .3s ease;
+      }
+      .nav-toggle-checkbox:checked ~ nav.asl-nav{ max-height:480px; padding:10px 20px 22px; }
+      nav.asl-nav > a, nav.asl-nav > span{ width:100%; padding:12px 0 !important; }
+      .hero-inner{ padding-left:20px !important; padding-right:20px !important; }
+      #services, #projects, #process, #about, #contact{ padding-left:20px !important; padding-right:20px !important; }
+      footer{ padding-left:20px !important; padding-right:20px !important; }
+      .process-grid{ grid-template-columns:1fr 1fr !important; gap:28px !important; }
+      .about-grid{ grid-template-columns:1fr !important; gap:40px !important; }
+      .stats-grid{ grid-template-columns:1fr !important; }
+      .contact-grid{ grid-template-columns:1fr !important; gap:48px !important; }
+      #projects .newbuild-card{ padding:2.5rem 1.5rem !important; }
+    }
+    @media (max-width:520px){
+      .process-grid{ grid-template-columns:1fr !important; }
+      #projects .cat-tab{ padding:0.8rem 1.2rem !important; }
+    }
   </style>
   <script src="gallery.js"></script>
 </helmet>
@@ -121,11 +153,13 @@
 <div ref="{{ rootRef }}" style="background: var(--stone); color: var(--alpine-green-500); font-family: var(--font-sans); font-weight: 300;">
 
   <!-- ============ HEADER ============ -->
-  <header style="position: sticky; top: 0; z-index: 30; display: flex; align-items: center; justify-content: space-between; padding: 18px 48px; background: rgba(244,241,236,0.88); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 1px solid var(--border-hairline);">
+  <header class="asl-header" style="position: sticky; top: 0; z-index: 30; display: flex; align-items: center; justify-content: space-between; padding: 18px 48px; background: rgba(244,241,236,0.88); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 1px solid var(--border-hairline);">
     <a href="#top" class="asl-logo" style="text-decoration: none; display: inline-flex;">
       <x-import component-from-global-scope="AlpineSignatureLivingDesignSystem_90a666.Logo" variant="horizontal" tone="dark" size="32" hint-size="200px,40px"></x-import>
     </a>
-    <nav style="display: flex; align-items: center; gap: 30px;">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu"><span></span><span></span><span></span></label>
+    <nav class="asl-nav" style="display: flex; align-items: center; gap: 30px;">
       <a href="#about" style="font-family: var(--font-sans); font-weight: 300; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--slate-sage); text-decoration: none;" style-hover="color: var(--alpine-green);">{{ t.navAbout }}</a>
       <a href="#services" style="font-family: var(--font-sans); font-weight: 300; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--slate-sage); text-decoration: none;" style-hover="color: var(--alpine-green);">{{ t.navServices }}</a>
       <a href="#projects" style="font-family: var(--font-sans); font-weight: 300; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--slate-sage); text-decoration: none;" style-hover="color: var(--alpine-green);">{{ t.navProjects }}</a>
@@ -143,7 +177,7 @@
     <img src="images/hero.jpg" alt="Swiss Alps mountain landscape in Valais" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
     <div style="position: absolute; inset: 0; background: rgba(22,32,26,0.52);"></div>
     <div style="position: absolute; inset: 0; box-shadow: inset 0 -180px 200px -80px rgba(22,32,26,0.85);"></div>
-    <div style="position: relative; width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 48px 92px;">
+    <div class="hero-inner" style="position: relative; width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 48px 92px;">
       <x-import component-from-global-scope="AlpineSignatureLivingDesignSystem_90a666.SectionLabel" tone="light" hint-size="auto,20px">{{ t.heroEyebrow }}</x-import>
       <h1 style="font-family: var(--font-display); font-weight: 500; font-size: clamp(40px, 5.6vw, 76px); line-height: 1.06; letter-spacing: 0.005em; margin: 24px 0 0; max-width: 960px;">{{ t.heroTitlePre }}<span style="font-style: italic; color: var(--gold-300);">{{ t.heroTitleEm }}</span></h1>
       <p style="font-family: var(--font-display); font-weight: 500; font-style: italic; font-size: clamp(22px, 2.6vw, 30px); line-height: 1.3; color: var(--gold-300); margin: 22px 0 0;">{{ t.heroTagline }}</p>
@@ -337,7 +371,7 @@
         <x-import component-from-global-scope="AlpineSignatureLivingDesignSystem_90a666.SectionLabel" tone="light" hint-size="auto,20px">{{ t.processEyebrow }}</x-import>
         <h2 style="font-family: var(--font-display); font-weight: 500; font-size: clamp(32px, 4.2vw, 50px); line-height: 1.1; letter-spacing: 0.005em; color: var(--stone); margin: 22px 0 0;">{{ t.processTitlePre }}<span style="font-style: italic; color: var(--gold-300);">{{ t.processTitleEm }}</span></h2>
       </div>
-      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 36px; margin: 60px 0 0;">
+      <div class="process-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 36px; margin: 60px 0 0;">
         <div>
           <div style="font-family: var(--font-display); font-weight: 500; font-size: 44px; line-height: 1; color: var(--gold-300);">01</div>
           <div style="width: 36px; height: 1px; background: var(--signature-gold); margin: 18px 0;"></div>
@@ -368,7 +402,7 @@
 
   <!-- ============ ABOUT ============ -->
   <section id="about" style="scroll-margin-top: 76px; padding: var(--sec-pad, 104px) 48px;">
-    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 80px; align-items: center;">
+    <div class="about-grid" style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 80px; align-items: center;">
       <div>
         <x-import component-from-global-scope="AlpineSignatureLivingDesignSystem_90a666.SectionLabel" hint-size="auto,20px">{{ t.aboutEyebrow }}</x-import>
         <h2 style="font-family: var(--font-display); font-weight: 500; font-size: clamp(32px, 4.2vw, 50px); line-height: 1.1; letter-spacing: 0.005em; color: var(--alpine-green); margin: 22px 0 0;">{{ t.aboutTitlePre }}<span style="font-style: italic;">{{ t.aboutTitleEm }}</span></h2>
@@ -388,7 +422,7 @@
         </div>
       </div>
     </div>
-    <div style="max-width: 1200px; margin: 72px auto 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--border-hairline); border-bottom: 1px solid var(--border-hairline);">
+    <div class="stats-grid" style="max-width: 1200px; margin: 72px auto 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--border-hairline); border-bottom: 1px solid var(--border-hairline);">
       <div style="padding: 32px 28px 32px 0; border-right: 1px solid var(--border-hairline);">
         <div style="font-family: var(--font-display); font-weight: 500; font-size: 38px; line-height: 1; color: var(--alpine-green);">{{ t.statBig1 }}</div>
         <div style="font-family: var(--font-sans); font-weight: 300; font-size: 14px; line-height: 1.55; color: var(--slate-sage); margin-top: 12px;">{{ t.statLabel1 }}</div>
@@ -406,7 +440,7 @@
 
   <!-- ============ CONTACT ============ -->
   <section id="contact" style="scroll-margin-top: 76px; padding: var(--sec-pad, 104px) 48px; background: var(--stone);">
-    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;">
+    <div class="contact-grid" style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;">
       <div>
         <x-import component-from-global-scope="AlpineSignatureLivingDesignSystem_90a666.SectionLabel" hint-size="auto,20px">{{ t.contactEyebrow }}</x-import>
         <h2 style="font-family: var(--font-display); font-weight: 500; font-size: clamp(32px, 4.2vw, 50px); line-height: 1.1; letter-spacing: 0.005em; color: var(--alpine-green); margin: 22px 0 0;">{{ t.contactTitlePre }}<span style="font-style: italic;">{{ t.contactTitleEm }}</span></h2>

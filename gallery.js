@@ -11,8 +11,8 @@
       name: "Ovronnaz",
       title: { en: "2.5-Room Apartment — Ovronnaz", fr: "Appartement 2.5 pièces — Ovronnaz" },
       desc: {
-        en: "A complete transformation of a dated alpine apartment in Ovronnaz — every room reimagined, every surface reconsidered, and every detail resolved with precision.",
-        fr: "Une transformation complète d'un appartement alpin vieillissant à Ovronnaz — chaque pièce repensée, chaque surface reconsidérée, chaque détail résolu avec précision."
+        en: "A complete transformation of a dated alpine apartment in Ovronnaz — every room reimagined, every surface reconsidered, and every detail resolved with precision. Bought at CHF 310K and sold at its full asking price of CHF 460K within two months, for CHF 64K of works (about CHF 1,190/m²).",
+        fr: "Une transformation complète d'un appartement alpin vieillissant à Ovronnaz — chaque pièce repensée, chaque surface reconsidérée, chaque détail résolu avec précision. Acheté CHF 310K et vendu au prix demandé de CHF 460K en deux mois, pour CHF 64K de travaux (environ CHF 1 190/m²)."
       },
       pairs: [
         { label: { en: "Living & Kitchen — The Result", fr: "Séjour & Cuisine — Le résultat" },

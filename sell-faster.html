@@ -149,6 +149,12 @@ summary::after{content:"+";font-family:var(--sans);font-weight:300;font-size:26p
 details[open] summary::after{content:"–"}
 details p{margin:0 0 22px;max-width:680px;color:var(--slate-sage)}
 
+/* link to main website */
+nav a.n.site{color:var(--alpine-green);font-weight:500}
+.site-band{padding:56px 0}
+.site-row{display:flex;flex-direction:column;align-items:flex-start;gap:26px}
+@media (min-width:860px){.site-band{padding:72px 0}.site-row{flex-direction:row;align-items:center;justify-content:space-between;gap:48px}.site-row .btn{flex:0 0 auto}}
+
 /* contact */
 .contact-grid{display:grid;grid-template-columns:1fr;gap:44px}
 .contact-ways{display:flex;flex-direction:column;gap:12px;margin-top:30px;max-width:420px}
@@ -188,6 +194,7 @@ footer{background:var(--alpine-green-700);color:var(--on-dark-muted);padding:56p
       <a class="n" href="#case">Case study</a>
       <a class="n" href="#how">Process</a>
       <a class="n" href="#contact">Contact</a>
+      <a class="n site" href="index.html">Website →</a>
       <span class="langs"><span class="on">EN</span><b>|</b><a href="vendre-plus-vite.html" lang="fr" hreflang="fr">FR</a></span>
       <a class="btn btn-dark" href="#contact">Arrange a call</a>
     </nav>
@@ -266,9 +273,9 @@ footer{background:var(--alpine-green-700);color:var(--on-dark-muted);padding:56p
       <p class="eyebrow">Process</p>
       <h2>Four stages, <em>one point of contact.</em></h2>
       <div class="steps">
-        <div class="step"><div class="num">01</div><h3>Initial consultation</h3><p>We begin with a conversation about your property and your objectives, followed by a site visit. This allows me to understand your project in full and to gather the information required to prepare a plan of action.</p></div>
+        <div class="step"><div class="num">01</div><h3>Initial consultation</h3><p>We begin with a conversation about your property and your objectives, followed by a site visit. This allows me to understand your project in full and to gather the information required to prepare a plan of action. No obligation.</p></div>
         <div class="step"><div class="num">02</div><h3>Proposal</h3><p>On a second call, I present a draft proposal setting out the plan of action, schedule, cost range and fees. Your feedback is incorporated into the final written proposal, which is agreed before work begins.</p></div>
-        <div class="step"><div class="num">03</div><h3>Execution</h3><p>I handle the permits, coordinate the contractors and supervise the site. You receive regular written progress reports with photographs.</p></div>
+        <div class="step"><div class="num">03</div><h3>Execution</h3><p>I handle the permits, coordinate the contractors and supervise the site. You receive regular written progress reports with photographs. I can also take care of the furnishing, whether for your own use or ahead of a sale. A well-furnished property helps buyers picture themselves in it and makes a sale easier.</p></div>
         <div class="step"><div class="num">04</div><h3>Handover</h3><p>You take possession of a completed property. If you are selling, your estate agent carries out the valuation and manages the sale. I can recommend an agent on request.</p></div>
       </div>
     </div>
@@ -293,6 +300,16 @@ footer{background:var(--alpine-green-700);color:var(--on-dark-muted);padding:56p
       <p class="eyebrow">Frequently asked questions</p>
       <h2>Practical <em>information.</em></h2>
       <div class="faq-list"><details><summary>Do I need to be on site?</summary><p>No. I represent you on site throughout the works and report to you in writing at regular intervals.</p></details><details><summary>Do you value or sell properties?</summary><p>No. Valuation and sale remain the responsibility of your estate agent. I manage the renovation and coordinate with the agent where a sale is planned.</p></details><details><summary>Is the service only for owners who intend to sell?</summary><p>No. The service is the same whether you are renovating for your own use or ahead of a sale. It also applies if you are acquiring a property that requires renovation.</p></details><details><summary>Where do you operate?</summary><p>In Lower Valais and Central Valais. I am open to discussing projects in other locations.</p></details></div>
+    </div>
+  </section>
+
+  <section class="dark site-band">
+    <div class="wrap site-row">
+      <div>
+        <h2 style="margin-top:0">More about <em>Alpine Signature Living.</em></h2>
+        <p class="lead" style="margin-top:14px">Services, completed projects and approach are presented in full on the main website.</p>
+      </div>
+      <a class="btn btn-light" href="index.html">Visit the website →</a>
     </div>
   </section>
 

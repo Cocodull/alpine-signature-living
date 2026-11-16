@@ -149,6 +149,12 @@ summary::after{content:"+";font-family:var(--sans);font-weight:300;font-size:26p
 details[open] summary::after{content:"–"}
 details p{margin:0 0 22px;max-width:680px;color:var(--slate-sage)}
 
+/* link to main website */
+nav a.n.site{color:var(--alpine-green);font-weight:500}
+.site-band{padding:56px 0}
+.site-row{display:flex;flex-direction:column;align-items:flex-start;gap:26px}
+@media (min-width:860px){.site-band{padding:72px 0}.site-row{flex-direction:row;align-items:center;justify-content:space-between;gap:48px}.site-row .btn{flex:0 0 auto}}
+
 /* contact */
 .contact-grid{display:grid;grid-template-columns:1fr;gap:44px}
 .contact-ways{display:flex;flex-direction:column;gap:12px;margin-top:30px;max-width:420px}
@@ -188,6 +194,7 @@ footer{background:var(--alpine-green-700);color:var(--on-dark-muted);padding:56p
       <a class="n" href="#case">Étude de cas</a>
       <a class="n" href="#how">Démarche</a>
       <a class="n" href="#contact">Contact</a>
+      <a class="n site" href="index.html">Site web →</a>
       <span class="langs"><a href="sell-faster.html" lang="en" hreflang="en">EN</a><b>|</b><span class="on">FR</span></span>
       <a class="btn btn-dark" href="#contact">Planifier un entretien</a>
     </nav>
@@ -266,9 +273,9 @@ footer{background:var(--alpine-green-700);color:var(--on-dark-muted);padding:56p
       <p class="eyebrow">Démarche</p>
       <h2>Quatre étapes, <em>un interlocuteur unique.</em></h2>
       <div class="steps">
-        <div class="step"><div class="num">01</div><h3>Première rencontre</h3><p>Nous commençons par un échange sur votre bien et vos objectifs, suivi d’une visite sur place. Cette étape me permet de bien comprendre votre projet et de réunir les informations nécessaires à l’élaboration d’un plan d’action.</p></div>
+        <div class="step"><div class="num">01</div><h3>Première rencontre</h3><p>Nous commençons par un échange sur votre bien et vos objectifs, suivi d’une visite sur place. Cette étape me permet de bien comprendre votre projet et de réunir les informations nécessaires à l’élaboration d’un plan d’action. Sans engagement.</p></div>
         <div class="step"><div class="num">02</div><h3>Proposition</h3><p>Lors d’un second entretien, je vous présente un projet de proposition précisant le plan d’action, le calendrier, la fourchette de coûts et les honoraires. Vos remarques sont intégrées à la proposition écrite définitive, convenue avant le début des travaux.</p></div>
-        <div class="step"><div class="num">03</div><h3>Réalisation</h3><p>Je me charge des autorisations, coordonne les artisans et supervise le chantier. Vous recevez des rapports d’avancement écrits réguliers, accompagnés de photographies.</p></div>
+        <div class="step"><div class="num">03</div><h3>Réalisation</h3><p>Je me charge des autorisations, coordonne les artisans et supervise le chantier. Vous recevez des rapports d’avancement écrits réguliers, accompagnés de photographies. Je peux également me charger de l’ameublement, pour votre propre usage ou en vue d’une vente. Un bien soigneusement meublé aide les acquéreurs à se projeter et facilite la vente.</p></div>
         <div class="step"><div class="num">04</div><h3>Remise du bien</h3><p>Vous prenez possession d’un bien achevé. En cas de vente, votre agent immobilier procède à l’estimation et conduit la vente. Je peux vous recommander un agent sur demande.</p></div>
       </div>
     </div>
@@ -293,6 +300,16 @@ footer{background:var(--alpine-green-700);color:var(--on-dark-muted);padding:56p
       <p class="eyebrow">Questions fréquentes</p>
       <h2>Informations <em>pratiques.</em></h2>
       <div class="faq-list"><details><summary>Ma présence sur place est-elle nécessaire ?</summary><p>Non. Je vous représente sur place pendant toute la durée des travaux et vous rends compte par écrit à intervalles réguliers.</p></details><details><summary>Réalisez-vous des estimations ou des ventes ?</summary><p>Non. L’estimation et la vente relèvent de votre agent immobilier. Je conduis la rénovation et me coordonne avec lui ou elle lorsqu’une vente est prévue.</p></details><details><summary>Le service s’adresse-t-il uniquement aux propriétaires vendeurs ?</summary><p>Non. Le service est identique, que vous rénoviez pour votre propre usage ou en vue d’une vente. Il s’applique également si vous acquérez un bien à rénover.</p></details><details><summary>Dans quel secteur intervenez-vous ?</summary><p>Dans le Bas-Valais et le Valais central. Je reste ouverte à l’étude de projets situés dans d’autres régions.</p></details></div>
+    </div>
+  </section>
+
+  <section class="dark site-band">
+    <div class="wrap site-row">
+      <div>
+        <h2 style="margin-top:0">En savoir plus sur <em>Alpine Signature Living.</em></h2>
+        <p class="lead" style="margin-top:14px">Services, réalisations et démarche : retrouvez la présentation complète sur le site principal.</p>
+      </div>
+      <a class="btn btn-light" href="index.html">Visiter le site →</a>
     </div>
   </section>
 

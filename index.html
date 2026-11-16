@@ -135,12 +135,13 @@
       header.asl-header{ padding:14px 20px !important; }
       nav.asl-nav{
         position:absolute; top:100%; left:0; right:0; width:100%;
-        flex-direction:column; align-items:flex-start; gap:0;
+        flex-direction:column !important; align-items:flex-start !important; gap:0 !important;
         background:var(--stone); border-bottom:1px solid var(--border-hairline);
         max-height:0; overflow:hidden; padding:0 20px;
         transition:max-height .3s ease;
       }
-      .nav-toggle-checkbox:checked ~ nav.asl-nav{ max-height:480px; padding:10px 20px 22px; }
+      .nav-toggle-checkbox:checked ~ nav.asl-nav{ max-height:560px; padding:6px 20px 22px; }
+      nav.asl-nav > a:last-child{ padding-top:16px !important; }
       nav.asl-nav > a, nav.asl-nav > span{ width:100%; padding:12px 0 !important; }
       .hero-inner{ padding-left:20px !important; padding-right:20px !important; }
       #services, #projects, #process, #about, #contact{ padding-left:20px !important; padding-right:20px !important; }
@@ -150,6 +151,21 @@
       .stats-grid{ grid-template-columns:1fr !important; }
       .contact-grid{ grid-template-columns:1fr !important; gap:48px !important; }
       #projects .newbuild-card{ padding:2.5rem 1.5rem !important; }
+      #services, #projects, #process, #about, #contact{ padding-top:64px !important; padding-bottom:64px !important; }
+      .hero-inner{ padding-bottom:56px !important; }
+      .hero-scroll{ display:none !important; }
+      .about-card{ padding:28px 22px !important; }
+      .stats-grid{ margin-top:48px !important; }
+      .stats-grid > div{ padding:22px 0 !important; border-right:none !important; border-bottom:1px solid var(--border-hairline); }
+      .stats-grid > div:last-child{ border-bottom:none; }
+      #projects input[type=email]{ font-size:16px !important; }
+      #projects .project-tabs, #projects .cat-tabs{ max-width:100%; }
+      #projects .ptab{ padding:0.7rem 1rem; }
+      #projects .reno-arrow, #projects .nb-arrow{ width:40px; height:40px; }
+      #projects .reno-prev, #projects .nb-prev{ left:0.5rem; }
+      #projects .reno-next, #projects .nb-next{ right:0.5rem; }
+      #projects .room-extra-afters img{ height:120px; }
+      .lb-close{ top:1rem; right:1rem; padding:10px; }
     }
     @media (max-width:520px){
       .process-grid{ grid-template-columns:1fr !important; }
@@ -195,12 +211,10 @@
         <a href="#contact" style="text-decoration: none; display: inline-flex;">
           <x-import component-from-global-scope="AlpineSignatureLivingDesignSystem_90a666.Button" hint-size="auto,46px">{{ t.heroCta1 }}</x-import>
         </a>
-        <a href="#services" style="text-decoration: none; display: inline-flex;">
-          <x-import component-from-global-scope="AlpineSignatureLivingDesignSystem_90a666.Button" variant="ghost" style="color: var(--stone);" hint-size="auto,38px">{{ t.heroCta2 }}</x-import>
-        </a>
+        <a href="#services" style="text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; padding: 0 6px; color: var(--stone); font-family: var(--font-sans); font-weight: 400; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase;">{{ t.heroCta2 }}</a>
       </div>
     </div>
-    <div style="position: absolute; right: 48px; bottom: 40px; display: flex; flex-direction: column; align-items: center; gap: 10px;">
+    <div class="hero-scroll" style="position: absolute; right: 48px; bottom: 40px; display: flex; flex-direction: column; align-items: center; gap: 10px;">
       <span style="font-family: var(--font-sans); font-weight: 300; font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--stone); opacity: 0.7; writing-mode: vertical-rl;">Scroll</span>
       <span style="width: 1px; height: 48px; background: var(--signature-gold);"></span>
     </div>
@@ -445,7 +459,7 @@
           </div>
         </div>
       </div>
-      <div style="background: var(--stone); border: 1px solid var(--border-hairline); border-radius: var(--radius-md); padding: 44px 40px; display: flex; flex-direction: column; gap: 26px;">
+      <div class="about-card" style="background: var(--stone); border: 1px solid var(--border-hairline); border-radius: var(--radius-md); padding: 44px 40px; display: flex; flex-direction: column; gap: 26px;">
         <div>
           <div style="font-family: var(--font-sans); font-weight: 300; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--slate-sage); margin-bottom: 8px;">{{ t.telLabel }}</div>
           <a href="tel:+41788653037" style="font-family: var(--font-sans); font-weight: 300; font-size: 18px; color: var(--alpine-green); text-decoration: none;" style-hover="color: var(--gold-600);">+41 78 865 30 37</a>
@@ -500,7 +514,7 @@
         </div>
       </div>
 
-      <x-import component-from-global-scope="AlpineSignatureLivingDesignSystem_90a666.Card" padding="40" elevated="true" hint-size="100%,520px">
+      <x-import component-from-global-scope="AlpineSignatureLivingDesignSystem_90a666.Card" padding="clamp(22px, 5vw, 40px)" elevated="true" hint-size="100%,520px">
         <form onsubmit="{{ onSubmit }}" style="display: flex; flex-direction: column; gap: 26px;">
           <x-import component-from-global-scope="AlpineSignatureLivingDesignSystem_90a666.Input" label="{{ t.formName }}" placeholder="{{ t.formNamePh }}" required="true" hint-size="100%,56px"></x-import>
           <x-import component-from-global-scope="AlpineSignatureLivingDesignSystem_90a666.Input" label="{{ t.formEmail }}" type="email" placeholder="{{ t.formEmailPh }}" required="true" hint-size="100%,56px"></x-import>
@@ -567,7 +581,7 @@ class Component extends DCLogic {
       svc3Title: "Budget control", svc3Desc: "Within your renovation project: a detailed works budget, competitive quotes from trusted local trades and rigorous cost control, with clear, regular reporting so there are no surprises.",
       svc4Title: "Buying to renovate", svc4Desc: "Planning to buy a property to renovate? I visit with you or on your behalf and estimate the works before you make an offer, so you buy at the right price.",
       svc5Title: "Pre-sale optimisation", svc5Desc: "A targeted refresh, staging and professional photography before listing, coordinated with your agent — so your property sale is optimised for time and value. Sell faster, for more.",
-      svc6Title: "Permits & paperwork", svc6Desc: "Building permits, authorities and co-ownership approvals — handled by me, following the complex rules and regulations of Wallis, so the works start and finish without delays.",
+      svc6Title: "Permits & paperwork", svc6Desc: "Building permits, authorities and co-ownership approvals — handled by me, following the complex rules and regulations of Valais, so the works start and finish without delays.",
       langNative: "Français — native fluency", langSub: "Seamlessly bilingual, without compromise", langFluent: "English — full professional fluency",
       galEyebrow: "Case studies", galTitlePre: "", galTitleEm: "Selected", galTitlePost: " works", galTabReno: "Renovation", galTabNew: "New Built sur Plans", filmLine: "It all comes down to data.", filmPreviewTag: "Preview", filmEmailPh: "Your email address", filmCta: "Get the brochure", filmSoundOn: "Turn sound on", filmSoundOff: "Turn sound off", filmGateNote: "Enter your email and the brochure will be sent to you.", filmDownloadCta: "Download the brochure (PDF)", filmThanks: "Thank you. Your download is starting — a copy will also be sent to your inbox shortly.", filmCaption: "A data-driven approach to residential property in Valais — from concept to completion.", galNewSub: "Two residential projects developed from plan — each shaped in close collaboration with the project team and architect to reflect the client's precise vision.",
       nb1Type: "Chalet · La Tzoumaz, Verbier", nb1TitleA: "La Tzoumaz", nb1TitleEm: "Private Chalet", nb1Desc: "A private chalet at the foot of the Verbier ski domain, owned by Corinne and developed in close collaboration with architect Thomas De Witt of Home Partners. Corinne contributed throughout the finishing and decoration, uniting two distinct creative visions into a single, cohesive alpine residence — refined at every stage until full satisfaction.", nb1Credit: "Owner — finishing & decoration · in collaboration with architect Thomas De Witt, Home Partners",
@@ -748,6 +762,15 @@ class Component extends DCLogic {
     };
   }
 }
+</script>
+<script>
+  // Close the mobile menu after a menu link is tapped
+  document.addEventListener('click', function (e) {
+    if (e.target.closest && e.target.closest('nav.asl-nav a')) {
+      var c = document.getElementById('nav-toggle');
+      if (c) c.checked = false;
+    }
+  });
 </script>
 </body>
 </html>
